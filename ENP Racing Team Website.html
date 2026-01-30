@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENP Racing Team - First Algerian Formula Student Team</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="ENP Racing Team - First Algerian Formula Student Team. Building Algeria's first combustion Formula Student car for the 2025-2026 season.">
+    <meta name="keywords" content="ENP Racing Team, Formula Student, Algeria, Motorsport, Engineering, ENP">
+    <meta name="author" content="ENP Racing Team">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ENP Racing Team - First Algerian Formula Student Team">
+    <meta property="og:description" content="Building Algeria's first Formula Student car">
+    <meta property="og:image" content="https://yoursite.com/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ENP Racing Team">
+    <meta name="twitter:description" content="First Algerian Formula Student Team">
+    <meta name="twitter:image" content="https://yoursite.com/twitter-image.jpg">
+    
+    <!-- Mobile -->
+    <meta name="theme-color" content="#e63946">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logoert.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="junior.css">
+</head>
+<body>
+
+
+    <!-- SKIP LINK -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+
+    <!-- LOADING SCREEN -->
+    <div class="loading-screen" id="loadingScreen">
+        <img src="Logoertblanc.png" alt="Loading" class="loading-logo">
+        <div class="loading-spinner"></div>
+        <p data-translate="loading">Loading...</p>
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="Logoertblanc.png" alt="ENP Racing Team Logo">
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link" data-translate="nav_home">Home</a></li>
+            <li><a href="#team" class="nav-link" data-translate="nav_team">Team</a></li>
+            <li><a href="#car" class="nav-link" data-translate="nav_car">The Car</a></li>
+            <li><a href="#shop" class="nav-link" data-translate="nav_shop">Shop</a></li>
+            <li><a href="#partners" class="nav-link" data-translate="nav_partners">Partners</a></li>
+            <li><a href="#media" class="nav-link" data-translate="nav_media">Media</a></li>
+            <li><a href="#news" class="nav-link" data-translate="nav_news">News</a></li>
+            <li><a href="#joinus" class="nav-link" data-translate="nav_joinus">Join us</a></li>
+            <li><a href="#contact" class="nav-link" data-translate="nav_contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">EN</button>
+                <button class="lang-btn" onclick="switchLanguage('fr')" data-lang="fr">FR</button>
+            </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+
+    <main id="main-content">
+
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 data-translate="hero_title">ENP Racing Team</h1>
+            <p class="hero-subtitle" data-translate="hero_subtitle">First Algerian Formula Student Team – Season 2025-2026</p>
+            <div class="countdown">
+                <span class="countdown-number" id="days">120</span>
+                <span class="countdown-label" data-translate="countdown_label">Days until roll-out</span>
+            </div>
+            <button class="btn-scroll" onclick="document.getElementById('team').scrollIntoView({behavior: 'smooth'})" data-translate="discover_more">
+                Discover More ↓
+            </button>
+        </div>
+    </section>
+
+
+    <!-- QUICK CARDS -->
+    <section class="quick-cards">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="quick-card" data-section="car">
+                    <div class="card-icon">🏎️</div>
+                    <h3 data-translate="card_car">The Car</h3>
+                    <p data-translate="card_car_desc">Discover ERT-01</p>
+                </div>
+                <div class="quick-card" data-section="team">
+                    <div class="card-icon">👥</div>
+                    <h3 data-translate="card_team">Team</h3>
+                    <p data-translate="card_team_desc">Meet the engineers</p>
+                </div>
+                <div class="quick-card" data-section="shop">
+                    <div class="card-icon">🛍️</div>
+                    <h3 data-translate="card_shop">Shop</h3>
+                    <p data-translate="card_shop_desc">Get ERT merch</p>
+                </div>
+                <div class="quick-card" data-section="partners">
+                    <div class="card-icon">🤝</div>
+                    <h3 data-translate="card_partners">Partners</h3>
+                    <p data-translate="card_partners_desc">Our supporters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TEAM -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 data-translate="team_title">Our Team</h2>
+            <p class="subtitle" data-translate="team_subtitle">The engineers building Algeria's first Formula Student car</p>
+
+
+            <!-- Organigramme Interactif -->
+            <div class="orgchart-container">
+                <div class="org-dept" data-popup="management">
+                    <span class="dept-icon">👔</span>
+                    <h4 data-translate="dept_management">Management</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="structure">
+                    <span class="dept-icon">🔧</span>
+                    <h4 data-translate="dept_structure">Structure</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="powertrain">
+                    <span class="dept-icon">⚙️</span>
+                    <h4 data-translate="dept_powertrain">Powertrain</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="aero">
+                    <span class="dept-icon">✈️</span>
+                    <h4 data-translate="dept_aero">Aero</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="control">
+                    <span class="dept-icon">🎮</span>
+                    <h4 data-translate="dept_control">Control</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="operations">
+                    <span class="dept-icon">📊</span>
+                    <h4 data-translate="dept_operations">Operations</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="communication">
+                    <span class="dept-icon">📱</span>
+                    <h4 data-translate="dept_communication">Communication</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+            </div>
+
+
+            <!-- Filtres -->
+            <div class="team-filters">
+                <button class="filter-btn active" data-filter="all" data-translate="filter_all">All</button>
+                <button class="filter-btn" data-filter="management" data-translate="dept_management">Management</button>
+                <button class="filter-btn" data-filter="structure" data-translate="dept_structure">Structure</button>
+                <button class="filter-btn" data-filter="powertrain" data-translate="dept_powertrain">Powertrain</button>
+                <button class="filter-btn" data-filter="aero" data-translate="dept_aero">Aero</button>
+                <button class="filter-btn" data-filter="control" data-translate="dept_control">Control</button>
+                <button class="filter-btn" data-filter="operations" data-translate="dept_operations">Operations</button>
+                <button class="filter-btn" data-filter="communication" data-translate="dept_communication">Communication</button>
+            </div>
+
+
+            <!-- Membres -->
+            <div class="members-grid">
+                <div class="member-card" data-department="management">
+                    <div class="member-photo"></div>
+                    <h3>MENZER Ilyes</h3>
+                    <p class="member-role">Project Manager</p>
+                    <span class="member-dept">Management</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="management">
+                    <div class="member-photo"></div>
+                    <h3>KADA Besma</h3>
+                    <p class="member-role">Team Manager</p>
+                    <span class="member-dept">Management</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="management">
+                    <div class="member-photo"></div>
+                    <h3>CHOUAMANE Anefal</h3>
+                    <p class="member-role">Chief Engineer</p>
+                    <span class="member-dept">Management</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>Driouche Ayoub</h3>
+                    <p class="member-role">CAD Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>BOUAFIA Kawthar</h3>
+                    <p class="member-role">CAD Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>HAMMOUR Aymen</h3>
+                    <p class="member-role">CAD Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>GUERMAH Mahdi</h3>
+                    <p class="member-role">Geometry Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>OTMANI Mohamed</h3>
+                    <p class="member-role">Geometry Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>REZIOAH Moad</h3>
+                    <p class="member-role">CAD Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>BOULEBGHAL Youcef</h3>
+                    <p class="member-role">CAD Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>TETBIRAT Chakib</h3>
+                    <p class="member-role">CAD Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>SEBAA Zahreddine</h3>
+                    <p class="member-role">Workshop Lead</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>BEKRAR Islem</h3>
+                    <p class="member-role">Structural Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>CHERZI Akrem</h3>
+                    <p class="member-role">Structural Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>ZAIR Ines</h3>
+                    <p class="member-role">Structural Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>BENGOUMIDA Youcef</h3>
+                    <p class="member-role">Structural Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>HOCINE Yasmine</h3>
+                    <p class="member-role">Structural Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>DEKHOCHE Allawa</h3>
+                    <p class="member-role">Structural Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CAR SPECIFICATIONS -->
+    <section id="car" class="section">
+        <div class="container">
+            <h2 data-translate="car_title">The Car</h2>
+            <p class="subtitle" data-translate="car_subtitle">ERT-01 Specifications</p>
+
+
+            <div class="car-specs">
+                <div class="spec-card">
+                    <h3>🏎️ Performance</h3>
+                    <ul>
+                        <li data-translate="spec_power">Power: 80 kW (Combustion Engine)</li>
+                        <li data-translate="spec_acceleration">Acceleration: 0-100 km/h in 3.5s</li>
+                        <li data-translate="spec_topspeed">Top Speed: 180 km/h</li>
+                        <li data-translate="spec_weight">Weight: 320 kg (target)</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>⚙️ Powertrain</h3>
+                    <ul>
+                        <li data-translate="spec_engine">Engine: 600cc Motorcycle Engine</li>
+                        <li data-translate="spec_transmission">Transmission: 6-Speed Sequential</li>
+                        <li data-translate="spec_drive">Drive: Rear-Wheel Drive</li>
+                        <li data-translate="spec_suspension">Suspension: Double-Wishbone</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>✈️ Aerodynamics</h3>
+                    <ul>
+                        <li data-translate="spec_drag">Drag Coefficient: 0.85</li>
+                        <li data-translate="spec_downforce">Downforce: 1200 N @ 100 km/h</li>
+                        <li data-translate="spec_wings">Front & Rear Wings: Carbon Fiber</li>
+                        <li data-translate="spec_undertray">Undertray: Full Carbon Fiber</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3>🎮 Control Systems</h3>
+                    <ul>
+                        <li data-translate="spec_steering">Power Steering: Fully Hydraulic</li>
+                        <li data-translate="spec_brakes">Brakes: 4-Wheel Disc with ABS</li>
+                        <li data-translate="spec_traction">Traction Control: Active</li>
+                        <li data-translate="spec_telemetry">Telemetry: Real-time Data Logging</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Car Gallery -->
+            <div class="car-gallery">
+                <img src="car-01.jpg" alt="ERT-01 Front View" class="gallery-img">
+                <img src="car-02.jpg" alt="ERT-01 Side View" class="gallery-img">
+                <img src="car-03.jpg" alt="ERT-01 Top View" class="gallery-img">
+                <img src="car-04.jpg" alt="ERT-01 Detail" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SHOP - COMING SOON -->
+    <section id="shop" class="section">
+        <div class="container">
+            <h2 data-translate="shop_title">Shop</h2>
+            <p class="subtitle" data-translate="shop_subtitle">Support the team with official merchandise</p>
+
+            <div class="coming-soon-container">
+                <div class="coming-soon">
+                    <h3>🚀 COMING SOON</h3>
+                    <p data-translate="shop_coming_soon">Our official ENP Racing Team shop will be available very soon. Stay tuned for exclusive merchandise!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PARTNERS -->
+    <section id="partners" class="section">
+        <div class="container">
+            <h2 data-translate="partners_title">Our Partners</h2>
+            <p class="subtitle" data-translate="partners_subtitle">Thanks to our amazing sponsors supporting our journey</p>
+
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <h3>Trans Baouchi</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Bkfire</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>VMS</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Technomotiv</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Ide Net</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Merbah Industrie</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Pima</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Soneras</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Karting Évasion Algérie</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>URIDEV</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>SARL DTM</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Purepox</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Bietmu Plus</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Houdine Laskri</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Ecorep</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>ACMP</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>HK Industrie</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Power Global</h3>
+                </div>
+                <div class="partner-card">
+                    <h3>Hamani TPI</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MEDIA -->
+    <section id="media" class="section">
+        <div class="container">
+            <h2 data-translate="media_title">Media</h2>
+            <p class="subtitle" data-translate="media_subtitle">Follow our journey</p>
+
+
+            <div class="media-grid">
+                <div class="media-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ENP Racing Team Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+                <div class="media-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ENP Racing Team Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+                <div class="media-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ENP Racing Team Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- NEWS - COMING SOON -->
+    <section id="news" class="section">
+        <div class="container">
+            <h2 data-translate="news_title">Latest News</h2>
+            <p class="subtitle" data-translate="news_subtitle">Stay updated with our latest updates</p>
+
+            <div class="coming-soon-container">
+                <div class="coming-soon">
+                    <h3>📰 COMING SOON</h3>
+                    <p data-translate="news_coming_soon">News and updates about our Formula Student journey will appear here. Follow us on social media for real-time updates!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JOIN US -->
+    <section id="joinus" class="section">
+        <div class="container">
+            <h2 data-translate="joinus_title">Join Us</h2>
+            <p class="subtitle" data-translate="joinus_subtitle">Be part of the team</p>
+
+
+            <div class="joinus-content">
+                <p data-translate="joinus_desc">We're always looking for passionate engineers and enthusiasts to join ENP Racing Team. Whether you're interested in mechanical design, electronics, aerodynamics, or team management, there's a place for you.</p>
+
+
+                <form class="joinus-form" onsubmit="submitJoinForm(event)">
+                    <div class="form-group">
+                        <label for="name" data-translate="form_name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate="form_email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialty" data-translate="form_specialty">Area of Interest:</label>
+                        <select id="specialty" name="specialty" required>
+                            <option value="">Select...</option>
+                            <option data-translate="specialty_mechanical" value="mechanical">Mechanical Design</option>
+                            <option data-translate="specialty_electronics" value="electronics">Electronics</option>
+                            <option data-translate="specialty_aero" value="aero">Aerodynamics</option>
+                            <option data-translate="specialty_management" value="management">Team Management</option>
+                            <option data-translate="specialty_other" value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-translate="form_message">Message:</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" data-translate="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 data-translate="contact_title">Contact</h2>
+            <p class="subtitle" data-translate="contact_subtitle">Get in touch with ENP Racing Team</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>ENP Racing Team</h3>
+                    <p>Email: <a href="mailto:enpracingteam@g.enp.edu.dz">enpracingteam@g.enp.edu.dz</a></p>
+                    <p>Location: École Nationale Polytechnique, Algiers</p>
+                </div>
+
+                <form class="contact-form" action="mailto:enpracingteam@g.enp.edu.dz" method="POST" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name / Nom</label>
+                        <input type="text" id="name" name="Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject / Objet</label>
+                        <input type="text" id="subject" name="Subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="Message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p data-translate="footer_text">© 2025 ENP Racing Team. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- POPUP SCRIPTS -->
+    <script>
+        const departmentData = {
+            management: {
+                title: "Management",
+                members: ["MENZER Ilyes", "KADA Besma", "CHOUAMANE Anefal"]
+            },
+            structure: {
+                title: "Structure",
+                members: ["Driouche Ayoub", "BOUAFIA Kawthar", "HAMMOUR Aymen", "GUERMAH Mahdi", "OTMANI Mohamed", "REZIOAH Moad", "BOULEBGHAL Youcef", "TETBIRAT Chakib", "SEBAA Zahreddine", "BEKRAR Islem", "CHERZI Akrem", "ZAIR Ines", "BENGOUMIDA Youcef", "HOCINE Yasmine", "DEKHOCHE Allawa"]
+            },
+            powertrain: {
+                title: "Powertrain",
+                members: []
+            },
+            aero: {
+                title: "Aero",
+                members: []
+            },
+            control: {
+                title: "Control",
+                members: []
+            },
+            operations: {
+                title: "Operations",
+                members: []
+            },
+            communication: {
+                title: "Communication",
+                members: []
+            }
+        };
+
+
+        function openDepartmentPopup(dept) {
+            const data = departmentData[dept];
+            const popupContent = `
+                <div class="popup-overlay" onclick="closePopup()">
+                    <div class="popup-content" onclick="event.stopPropagation()">
+                        <button class="popup-close" onclick="closePopup()">✕</button>
+                        <h2>${data.title}</h2>
+                        <ul>
+                            ${data.members.map(member => `<li>${member}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', popupContent);
+        }
+
+        function closePopup() {
+            const popup = document.querySelector('.popup-overlay');
+            if (popup) popup.remove();
+        }
+
+
+        document.querySelectorAll('.org-dept').forEach(dept => {
+            dept.addEventListener('click', function() {
+                openDepartmentPopup(this.dataset.popup);
+            });
+        });
+
+
+        // Team Filtering
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.member-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.department === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+
+        // Shopping Cart
+        let cart = [];
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            const cartCount = document.getElementById('cart-count');
+
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                const itemHTML = `
+                    <div class="cart-item">
+                        <span>${item.name} - ${item.price} DA</span>
+                        <button onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                `;
+                cartItems.insertAdjacentHTML('beforeend', itemHTML);
+            });
+
+            cartTotal.textContent = total + ' DA';
+            cartCount.textContent = cart.length;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function toggleCart() {
+            const panel = document.getElementById('cart-panel');
+            panel.classList.toggle('active');
+        }
+
+
+        // Join Form
+        function submitJoinForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const specialty = document.getElementById('specialty').value;
+            const message = document.getElementById('message').value;
+
+            console.log('Form submitted:', { name, email, specialty, message });
+            alert('Thank you for your interest! We will contact you soon.');
+            event.target.reset();
+        }
+
+
+        // Language Switching
+        const translations = {
+            en: {
+                nav_home: 'Home',
+                nav_team: 'Team',
+                nav_car: 'The Car',
+                nav_shop: 'Shop',
+                nav_partners: 'Partners',
+                nav_media: 'Media',
+                nav_news: 'News',
+                nav_joinus: 'Join us',
+                nav_contact: 'Contact',
+                hero_title: 'ENP Racing Team',
+                hero_subtitle: 'First Algerian Formula Student Team – Season 2025-2026',
+                countdown_label: 'Days until roll-out',
+                discover_more: 'Discover More ↓',
+                card_car: 'The Car',
+                card_car_desc: 'Discover ERT-01',
+                card_team: 'Team',
+                card_team_desc: 'Meet the engineers',
+                card_shop: 'Shop',
+                card_shop_desc: 'Get ERT merch',
+                card_partners: 'Partners',
+                card_partners_desc: 'Our supporters',
+                team_title: 'Our Team',
+                team_subtitle: 'The engineers building Algeria\'s first Formula Student car',
+                dept_management: 'Management',
+                dept_structure: 'Structure',
+                dept_powertrain: 'Powertrain',
+                dept_aero: 'Aero',
+                dept_control: 'Control',
+                dept_operations: 'Operations',
+                dept_communication: 'Communication',
+                click_details: 'Click for details',
+                filter_all: 'All',
+                car_title: 'The Car',
+                car_subtitle: 'ERT-01 Specifications',
+                spec_power: 'Power: 80 kW (Combustion Engine)',
+                spec_acceleration: 'Acceleration: 0-100 km/h in 3.5s',
+                spec_topspeed: 'Top Speed: 180 km/h',
+                spec_weight: 'Weight: 320 kg (target)',
+                spec_engine: 'Engine: 600cc Motorcycle Engine',
+                spec_transmission: 'Transmission: 6-Speed Sequential',
+                spec_drive: 'Drive: Rear-Wheel Drive',
+                spec_suspension: 'Suspension: Double-Wishbone',
+                spec_drag: 'Drag Coefficient: 0.85',
+                spec_downforce: 'Downforce: 1200 N @ 100 km/h',
+                spec_wings: 'Front & Rear Wings: Carbon Fiber',
+                spec_undertray: 'Undertray: Full Carbon Fiber',
+                spec_steering: 'Power Steering: Fully Hydraulic',
+                spec_brakes: 'Brakes: 4-Wheel Disc with ABS',
+                spec_traction: 'Traction Control: Active',
+                spec_telemetry: 'Telemetry: Real-time Data Logging',
+                shop_title: 'Shop',
+                shop_subtitle: 'Support the team with official merchandise',
+                product_tshirt: 'T-Shirt',
+                product_hoodie: 'Hoodie',
+                product_cap: 'Cap',
+                product_sticker: 'Sticker Pack',
+                add_to_cart: 'Add to Cart',
+                shopping_cart: 'Shopping Cart',
+                total: 'Total: ',
+                checkout: 'Checkout',
+                partners_title: 'Our Partners',
+                partners_subtitle: 'Thanks to our amazing sponsors',
+                media_title: 'Media',
+                media_subtitle: 'Follow our journey',
+                news_title: 'Latest News',
+                news_subtitle: 'Stay updated',
+                news_headline_1: 'Chassis Assembly Complete',
+                news_desc_1: 'We\'ve successfully assembled the main chassis. Next: engine integration.',
+                news_headline_2: 'Aerodynamic Testing',
+                news_desc_2: 'CFD simulations show excellent performance. Wind tunnel testing planned for next month.',
+                news_headline_3: 'New Sponsor Announcement',
+                news_desc_3: 'Exciting news! We\'re proud to announce our newest partner.',
+                joinus_title: 'Join Us',
+                joinus_subtitle: 'Be part of the team',
+                joinus_desc: 'We\'re always looking for passionate engineers and enthusiasts to join ENP Racing Team. Whether you\'re interested in mechanical design, electronics, aerodynamics, or team management, there\'s a place for you.',
+                form_name: 'Full Name:',
+                form_email: 'Email:',
+                form_specialty: 'Area of Interest:',
+                form_message: 'Message:',
+                specialty_mechanical: 'Mechanical Design',
+                specialty_electronics: 'Electronics',
+                specialty_aero: 'Aerodynamics',
+                specialty_management: 'Team Management',
+                specialty_other: 'Other',
+                submit: 'Submit',
+                contact_title: 'Contact',
+                contact_subtitle: 'Get in touch',
+                footer_text: '© 2025 ENP Racing Team. All rights reserved.',
+                loading: 'Loading...'
+            },
+            fr: {
+                nav_home: 'Accueil',
+                nav_team: 'Équipe',
+                nav_car: 'La Voiture',
+                nav_shop: 'Boutique',
+                nav_partners: 'Partenaires',
+                nav_media: 'Médias',
+                nav_news: 'Actualités',
+                nav_joinus: 'Nous rejoindre',
+                nav_contact: 'Contact',
+                hero_title: 'ENP Racing Team',
+                hero_subtitle: 'Première Équipe Algérienne de Formula Student – Saison 2025-2026',
+                countdown_label: 'Jours jusqu\'au lancement',
+                discover_more: 'En Savoir Plus ↓',
+                card_car: 'La Voiture',
+                card_car_desc: 'Découvrez ERT-01',
+                card_team: 'Équipe',
+                card_team_desc: 'Rencontrez les ingénieurs',
+                card_shop: 'Boutique',
+                card_shop_desc: 'Procurez-vous des produits ERT',
+                card_partners: 'Partenaires',
+                card_partners_desc: 'Nos sponsors',
+                team_title: 'Notre Équipe',
+                team_subtitle: 'Les ingénieurs construisant la première voiture Formula Student d\'Algérie',
+                dept_management: 'Management',
+                dept_structure: 'Structure',
+                dept_powertrain: 'Motopropulseur',
+                dept_aero: 'Aérodynamique',
+                dept_control: 'Contrôle',
+                dept_operations: 'Opérations',
+                dept_communication: 'Communication',
+                click_details: 'Cliquez pour plus de détails',
+                filter_all: 'Tous',
+                car_title: 'La Voiture',
+                car_subtitle: 'Spécifications ERT-01',
+                spec_power: 'Puissance : 80 kW (Moteur à Combustion)',
+                spec_acceleration: 'Accélération : 0-100 km/h en 3,5s',
+                spec_topspeed: 'Vitesse maximale : 180 km/h',
+                spec_weight: 'Poids : 320 kg (objectif)',
+                spec_engine: 'Moteur : Moteur de Moto 600cc',
+                spec_transmission: 'Transmission : Séquentielle 6 Vitesses',
+                spec_drive: 'Propulsion : Traction Arrière',
+                spec_suspension: 'Suspension : Double Triangulation',
+                spec_drag: 'Coefficient de Traînée : 0,85',
+                spec_downforce: 'Force d\'appui : 1200 N @ 100 km/h',
+                spec_wings: 'Aileron Avant et Arrière : Fibre de Carbone',
+                spec_undertray: 'Soubassement : Fibre de Carbone Complet',
+                spec_steering: 'Direction Assistée : Complètement Hydraulique',
+                spec_brakes: 'Freins : Disques 4 Roues avec ABS',
+                spec_traction: 'Contrôle de Traction : Actif',
+                spec_telemetry: 'Télémétrie : Enregistrement de Données en Temps Réel',
+                shop_title: 'Boutique',
+                shop_subtitle: 'Soutenez l\'équipe avec le merchandise officiel',
+                product_tshirt: 'T-Shirt',
+                product_hoodie: 'Hoodie',
+                product_cap: 'Casquette',
+                product_sticker: 'Pack d\'Autocollants',
+                add_to_cart: 'Ajouter au Panier',
+                shopping_cart: 'Panier d\'Achat',
+                total: 'Total : ',
+                checkout: 'Passer la Commande',
+                partners_title: 'Nos Partenaires',
+                partners_subtitle: 'Merci à nos sponsors exceptionnels',
+                media_title: 'Médias',
+                media_subtitle: 'Suivez notre voyage',
+                news_title: 'Actualités Récentes',
+                news_subtitle: 'Restez informé',
+                news_headline_1: 'Assemblage du Châssis Terminé',
+                news_desc_1: 'Nous avons réussi à assembler le châssis principal. Prochaine étape : intégration du moteur.',
+                news_headline_2: 'Tests Aérodynamiques',
+                news_desc_2: 'Les simulations CFD montrent d\'excellentes performances. Tests en soufflerie prévus le mois prochain.',
+                news_headline_3: 'Annonce d\'un Nouveau Sponsor',
+                news_desc_3: 'Excellente nouvelle ! Nous sommes fiers d\'annoncer notre nouveau partenaire.',
+                joinus_title: 'Nous Rejoindre',
+                joinus_subtitle: 'Faites partie de l\'équipe',
+                joinus_desc: 'Nous recherchons toujours des ingénieurs passionnés et des enthousiastes pour rejoindre ENP Racing Team. Que vous soyez intéressé par la conception mécanique, l\'électronique, l\'aérodynamique ou la gestion d\'équipe, il y a une place pour vous.',
+                form_name: 'Nom Complet :',
+                form_email: 'Email :',
+                form_specialty: 'Domaine d\'Intérêt :',
+                form_message: 'Message :',
+                specialty_mechanical: 'Conception Mécanique',
+                specialty_electronics: 'Électronique',
+                specialty_aero: 'Aérodynamique',
+                specialty_management: 'Gestion d\'Équipe',
+                specialty_other: 'Autre',
+                submit: 'Soumettre',
+                contact_title: 'Contact',
+                contact_subtitle: 'Contactez-nous',
+                footer_text: '© 2025 ENP Racing Team. Tous droits réservés.',
+                loading: 'Chargement...'
+            }
+        };
+
+
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.dataset.translate;
+                element.textContent = translations[lang][key] || key;
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+            localStorage.setItem('language', lang);
+        }
+
+
+        // Load saved language on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('language') || 'en';
+            switchLanguage(savedLanguage);
+
+            // Remove loading screen
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'none';
+                }
+            }, 500);
+        });
+
+
+        // Mobile Menu Toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(15, 15, 15, 0.95)';
+                navbar.style.boxShadow = '0 2px 10px rgba(230, 57, 70, 0.1)';
+            } else {
+                navbar.style.backgroundColor = 'rgba(15, 15, 15, 0.8)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>SADOU Youcef</h3>
+                    <p class="member-role">Structural Engineer</p>
+                    <span class="member-dept">Structure</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>CHTTIBI Azem</h3>
+                    <p class="member-role">Engine Specialist</p>
+                    <span class="member-dept">Powertrain</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>ZAOUADI Yacine</h3>
+                    <p class="member-role">Actuators Specialist</p>
+                    <span class="member-dept">Powertrain</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>TOUMERT Ania</h3>
+                    <p class="member-role">Documentation Lead</p>
+                    <span class="member-dept">Powertrain</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>s="member-dept">Powertrain</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>GHEMARI Yousra</h3>
+                    <p class="member-role">Schematics Lead</p>
+                    <span class="member-dept">Powertrain</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>KERMOUCH Aya</h3>
+                    <p class="member-role">Wiring Lead</p>
+                    <span class="member-dept">Powertrain</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>NAIT SAIDI Akrem</h3>
+                    <p class="member-role">Wiring Co-Lead</p>
+                    <span class="member-dept">Powertrain</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>KHIAL Ibrahim</h3>
+                    <p class="member-role">ECU & Control Specialist</p>
+                    <span class="member-dept">Control</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>ATCHI Abderrezak</h3>
+                    <p class="member-role">Circuit Testing Specialist</p>
+                    <span class="member-dept">Control</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>SMAILI Ikram</h3>
+                    <p class="member-role">Safety & Quality Lead</p>
+                    <span class="member-dept">Control</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>Karim Gaouaoui</h3>
+                    <p class="member-role">Control Engineer</p>
+                    <span class="member-dept">Control</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>GRINE Nardjes</h3>
+                    <p class="member-role">Sensors Specialist</p>
+                    <span class="member-dept">Control</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="aero">
+                    <div class="member-photo"></div>
+                    <h3>BENAIDA Haithem</h3>
+                    <p class="member-role">CFD Responsible</p>
+                    <span class="member-dept">Aero</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="aero">
+                    <div class="member-photo"></div>
+                    <h3>NASRI Yacine</h3>
+                    <p class="member-role">Composites Responsible</p>
+                    <span class="member-dept">Aero</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="aero">
+                    <div class="member-photo"></div>
+                    <h3>AOUN Ayoub</h3>
+                    <p class="member-role">CAD Engineer</p>
+                    <span class="member-dept">Aero</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="aero">
+                    <div class="member-photo"></div>
+                    <h3>TOUHAMI Moulay</h3>
+                    <p class="member-role">Aero Designer</p>
+                    <span class="member-dept">Aero</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="operations">
+                    <div class="member-photo"></div>
+                    <h3>BAOUCHE Hammouda</h3>
+                    <p class="member-role">Logistics Lead</p>
+                    <span class="member-dept">Operations</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="operations">
+                    <div class="member-photo"></div>
+                    <h3>DJOUADI Asma</h3>
+                    <p class="member-role">Coordination Lead</p>
+                    <span class="member-dept">Operations</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="operations">
+                    <div class="member-photo"></div>
+                    <h3>Zitoune Ahmed Yassine</h3>
+                    <p class="member-role">Procurement</p>
+                    <span class="member-dept">Operations</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>meguellati moncef</h3>
+                    <p class="member-role">Social Media Manager</p>
+                    <span class="member-dept">Communication</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>HAMMADI Nesrine</h3>
+                    <p class="member-role">Visual Identity Lead</p>
+                    <span class="member-dept">Communication</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>BENKEMOUN Meriem</h3>
+                    <p class="member-role">Content Manager</p>
+                    <span class="member-dept">Communication</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>DJEMAI Hala</h3>
+                    <p class="member-role">Content Manager</p>
+                    <span class="member-dept">Communication</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>TOUHAMI moulay</h3>
+                    <p class="member-role">Designer</p>
+                    <span class="member-dept">Communication</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>SAADOUNI Yanis</h3>
+                    <p class="member-role">Web Developer</p>
+                    <span class="member-dept">Communication</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>BESSAIH Anis</h3>
+                    <p class="member-role">Web Developer</p>
+                    <span class="member-dept">Communication</span>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="member-linkedin" title="LinkedIn Profile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- REST OF THE PAGE (THE CAR, SHOP, PARTNERS, MEDIA, NEWS, JOIN US, CONTACT sections remain unchanged) -->
+    <!-- I've included only the TEAM section with all members integrated -->
+    <!-- Please keep all other sections from your original code -->
+
+
+    <!-- POPUPS DÉPARTEMENTS -->
+    <div class="popup-overlay" id="popup-management">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_management">Management</h3>
+            <p data-translate="popup_management_desc">Project leadership and technical direction</p>
+            <div class="popup-members">
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>MENZER Ilyes</h4>
+                    <p>Project Manager</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>KADA Besma</h4>
+                    <p>Team Manager</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>CHOUAMANE Anefal</h4>
+                    <p>Chief Engineer</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup-overlay" id="popup-structure">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_structure">Structure</h3>
+            <p data-translate="popup_structure_desc">Chassis design and structural integrity</p>
+            <div class="popup-members">
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>SEBAA Zahreddine</h4>
+                    <p>Workshop Lead</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup-overlay" id="popup-powertrain">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_powertrain">Powertrain</h3>
+            <p data-translate="popup_powertrain_desc">Engine, transmission, and cooling systems</p>
+            <div class="popup-members">
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>CHTTIBI Azem</h4>
+                    <p>Engine Specialist</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup-overlay" id="popup-aero">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_aero">Aerodynamics</h3>
+            <p data-translate="popup_aero_desc">Wings, undertray, and aerodynamic optimization</p>
+            <div class="popup-members">
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>BENAIDA Haithem</h4>
+                    <p>CFD Responsible</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup-overlay" id="popup-control">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_control">Control Systems</h3>
+            <p data-translate="popup_control_desc">Electronics, sensors, and data acquisition</p>
+            <div class="popup-members">
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>KHIAL Ibrahim</h4>
+                    <p>ECU & Control Specialist</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup-overlay" id="popup-operations">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_operations">Operations</h3>
+            <p data-translate="popup_operations_desc">Project management, budget, and logistics</p>
+            <div class="popup-members">
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>BAOUCHE Hammouda</h4>
+                    <p>Logistics Lead</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup-overlay" id="popup-communication">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_communication">Communication</h3>
+            <p data-translate="popup_communication_desc">Media, social networks, and public relations</p>
+            <div class="popup-members">
+                <div class="popup-member">
+                    <div class="popup-member-photo"></div>
+                    <h4>meguellati moncef</h4>
+                    <p>Social Media Manager</p>
+                    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Logoertblanc.png" alt="ERT Logo" class="footer-logo">
+                    <p data-translate="footer_tagline">First Algerian Formula Student Team</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-translate="footer_quicklinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#team" data-translate="nav_team">Team</a></li>
+                        <li><a href="#car" data-translate="nav_car">The Car</a></li>
+                        <li><a href="#shop" data-translate="nav_shop">Shop</a></li>
+                        <li><a href="#joinus" data-translate="nav_joinus">Join Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-translate="footer_followus">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/enpracingteam" target="_blank">Instagram</a>
+                        <a href="https://linkedin.com/company/enpracingteam" target="_blank">LinkedIn</a>
+                        <a href="https://youtube.com/@enpracingteam" target="_blank">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 ENP Racing Team. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="kill.js"></script>
+</body>
+</html>

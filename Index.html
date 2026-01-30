@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENP Racing Team - First Algerian Formula Student Team</title>
+
+    <!-- SEO -->
+    <meta name="description" content="ENP Racing Team - First Algerian Formula Student Team. Building Algeria's first combustion Formula Student car for the 2025-2026 season.">
+    <meta name="keywords" content="ENP Racing Team, Formula Student, Algeria, Motorsport, Engineering, ENP">
+    <meta name="author" content="ENP Racing Team">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ENP Racing Team - First Algerian Formula Student Team">
+    <meta property="og:description" content="Building Algeria's first Formula Student car">
+    <meta property="og:image" content="https://yoursite.com/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ENP Racing Team">
+    <meta name="twitter:description" content="First Algerian Formula Student Team">
+    <meta name="twitter:image" content="https://yoursite.com/twitter-image.jpg">
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#e63946">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logoert.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="junior.css">
+</head>
+<body>
+
+    <!-- SKIP LINK -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- LOADING SCREEN -->
+    <div class="loading-screen" id="loadingScreen">
+        <img src="Logoertblanc.png" alt="Loading" class="loading-logo">
+        <div class="loading-spinner"></div>
+        <p data-translate="loading">Loading...</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="Logoertblanc.png" alt="ENP Racing Team Logo">
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link" data-translate="nav_home">Home</a></li>
+            <li><a href="#team" class="nav-link" data-translate="nav_team">Team</a></li>
+            <li><a href="#car" class="nav-link" data-translate="nav_car">The Car</a></li>
+            <li><a href="#shop" class="nav-link" data-translate="nav_shop">Shop</a></li>
+            <li><a href="#partners" class="nav-link" data-translate="nav_partners">Partners</a></li>
+            <li><a href="#media" class="nav-link" data-translate="nav_media">Media</a></li>
+            <li><a href="#news" class="nav-link" data-translate="nav_news">News</a></li>
+            <li><a href="#joinus" class="nav-link" data-translate="nav_joinus">Join us</a></li>
+            <li><a href="#contact" class="nav-link" data-translate="nav_contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">EN</button>
+                <button class="lang-btn" onclick="switchLanguage('fr')" data-lang="fr">FR</button>
+            </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main id="main-content">
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 data-translate="hero_title">ENP Racing Team</h1>
+            <p class="hero-subtitle" data-translate="hero_subtitle">First Algerian Formula Student Team – Season 2025-2026</p>
+            <div class="countdown">
+                <span class="countdown-number" id="days">177</span>
+                <span class="countdown-label" data-translate="countdown_label">Days until roll-out</span>
+            </div>
+            <button class="btn-scroll" onclick="document.getElementById('team').scrollIntoView({behavior: 'smooth'})" data-translate="discover_more">
+                Discover More ↓
+            </button>
+        </div>
+    </section>
+
+    <!-- QUICK CARDS -->
+    <section class="quick-cards">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="quick-card" data-section="car">
+                    <div class="card-icon">🏎️</div>
+                    <h3 data-translate="card_car">The Car</h3>
+                    <p data-translate="card_car_desc">Discover ERT-01</p>
+                </div>
+                <div class="quick-card" data-section="team">
+                    <div class="card-icon">👥</div>
+                    <h3 data-translate="card_team">Team</h3>
+                    <p data-translate="card_team_desc">Meet the engineers</p>
+                </div>
+                <div class="quick-card" data-section="shop">
+                    <div class="card-icon">🛍️</div>
+                    <h3 data-translate="card_shop">Shop</h3>
+                    <p data-translate="card_shop_desc">Get ERT merch</p>
+                </div>
+                <div class="quick-card" data-section="partners">
+                    <div class="card-icon">🤝</div>
+                    <h3 data-translate="card_partners">Partners</h3>
+                    <p data-translate="card_partners_desc">Our supporters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 data-translate="team_title">Our Team</h2>
+            <p class="subtitle" data-translate="team_subtitle">The engineers building Algeria's first Formula Student car</p>
+
+            <!-- Organigramme Interactif -->
+            <div class="orgchart-container">
+                <div class="org-dept" data-popup="structure">
+                    <span class="dept-icon">🔧</span>
+                    <h4 data-translate="dept_structure">Structure</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="powertrain">
+                    <span class="dept-icon">⚙️</span>
+                    <h4 data-translate="dept_powertrain">Powertrain</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="aero">
+                    <span class="dept-icon">✈️</span>
+                    <h4 data-translate="dept_aero">Aero</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="control">
+                    <span class="dept-icon">🎮</span>
+                    <h4 data-translate="dept_control">Control</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="operations">
+                    <span class="dept-icon">📊</span>
+                    <h4 data-translate="dept_operations">Operations</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+                <div class="org-dept" data-popup="communication">
+                    <span class="dept-icon">📱</span>
+                    <h4 data-translate="dept_communication">Communication</h4>
+                    <p data-translate="click_details">Click for details</p>
+                </div>
+            </div>
+
+            <!-- Filtres -->
+            <div class="team-filters">
+                <button class="filter-btn active" data-filter="all" data-translate="filter_all">All</button>
+                <button class="filter-btn" data-filter="management" data-translate="dept_management">Management</button>
+                <button class="filter-btn" data-filter="structure" data-translate="dept_structure">Structure</button>
+                <button class="filter-btn" data-filter="powertrain" data-translate="dept_powertrain">Powertrain</button>
+                <button class="filter-btn" data-filter="aero" data-translate="dept_aero">Aero</button>
+                <button class="filter-btn" data-filter="control" data-translate="dept_control">Control</button>
+                <button class="filter-btn" data-filter="operations" data-translate="dept_operations">Operations</button>
+                <button class="filter-btn" data-filter="communication" data-translate="dept_communication">Communication</button>
+            </div>
+
+            <!-- Membres -->
+            <div class="members-grid">
+                <!-- MANAGEMENT TEAM -->
+                <div class="member-card" data-department="management">
+                    <div class="member-photo"></div>
+                    <h3>MENZER Ilyes</h3>
+                    <p class="member-role">Project Manager</p>
+                    <span class="member-dept">Management</span>
+                </div>
+                <div class="member-card" data-department="management">
+                    <div class="member-photo"></div>
+                    <h3>KADA Besma</h3>
+                    <p class="member-role">Team Manager</p>
+                    <span class="member-dept">Management</span>
+                </div>
+                <div class="member-card" data-department="management">
+                    <div class="member-photo"></div>
+                    <h3>CHOUMANE Anefal</h3>
+                    <p class="member-role">Chief Engineer</p>
+                    <span class="member-dept">Management</span>
+                </div>
+
+                <!-- STRUCTURAL DEPARTMENT -->
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>DRIOUCHE Ayoub</h3>
+                    <p class="member-role">CAD</p>
+                    <span class="member-dept">Structure</span>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>BOUAFIA Kawthar</h3>
+                    <p class="member-role">CAD-quiz</p>
+                    <span class="member-dept">Structure</span>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>HAMMOUR Aymen</h3>
+                    <p class="member-role">Geometry-upright</p>
+                    <span class="member-dept">Structure</span>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>GUERMAH Mahdi</h3>
+                    <p class="member-role">Geometry-sim</p>
+                    <span class="member-dept">Structure</span>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>OTMANI Mohamed</h3>
+                    <p class="member-role">CAD-sim</p>
+                    <span class="member-dept">Structure</span>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>REZIOUK Moad</h3>
+                    <p class="member-role">Geometry</p>
+                    <span class="member-dept">Structure</span>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>BOULEBGHAL Youcef</h3>
+                    <p class="member-role">CAD</p>
+                    <span class="member-dept">Structure</span>
+                </div>
+                <div class="member-card" data-department="structure">
+                    <div class="member-photo"></div>
+                    <h3>TETBIRAT Chakib</h3>
+                    <p class="member-role">Structure Engineer</p>
+                    <span class="member-dept">Structure</span>
+                </div>
+
+                <!-- POWERTRAIN DEPARTMENT -->
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>SEBAA Zahreddine</h3>
+                    <p class="member-role">Braking System</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>BEKRAR Islem</h3>
+                    <p class="member-role">Ergonomie</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>CHERZI Akrem</h3>
+                    <p class="member-role">Engine</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>ZAIR Ines</h3>
+                    <p class="member-role">Cooling System</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>BENGOUMIDA Youcef</h3>
+                    <p class="member-role">Mountings</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>HOCINE Yasmine</h3>
+                    <p class="member-role">Clutch System</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>DEKHOUCHE Allawa</h3>
+                    <p class="member-role">Lubrification System</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>SADOU Youcef</h3>
+                    <p class="member-role">Différentiel</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+                <div class="member-card" data-department="powertrain">
+                    <div class="member-photo"></div>
+                    <h3>CHTTIBI Azem</h3>
+                    <p class="member-role">Powertrain Engineer</p>
+                    <span class="member-dept">Powertrain</span>
+                </div>
+
+                <!-- CONTROL DEPARTMENT -->
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>ZAOUADI Yacine</h3>
+                    <p class="member-role">Actuators Specialist</p>
+                    <span class="member-dept">Control</span>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>GHEMARI Yousra</h3>
+                    <p class="member-role">Head of Documentation</p>
+                    <span class="member-dept">Control</span>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>KERMOUCHE Aya</h3>
+                    <p class="member-role">Schematics Lead Engineer</p>
+                    <span class="member-dept">Control</span>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>NAIT SAIDI Akrem</h3>
+                    <p class="member-role">Wiring Lead Engineer</p>
+                    <span class="member-dept">Control</span>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>KHIAL Ibrahim</h3>
+                    <p class="member-role">Wiring Co-Lead Engineer</p>
+                    <span class="member-dept">Control</span>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>GAOUAOUI Karim</h3>
+                    <p class="member-role">ECU & Control Systems Specialist</p>
+                    <span class="member-dept">Control</span>
+                </div>
+                <div class="member-card" data-department="control">
+                    <div class="member-photo"></div>
+                    <h3>GRINE Nardjes</h3>
+                    <p class="member-role">Sensors Specialist</p>
+                    <span class="member-dept">Control</span>
+                </div>
+
+                <!-- AERODYNAMICS DEPARTMENT -->
+                <div class="member-card" data-department="aero">
+                    <div class="member-photo"></div>
+                    <h3>BENAIDA Haithem</h3>
+                    <p class="member-role">CFD Responsible</p>
+                    <span class="member-dept">Aerodynamics</span>
+                </div>
+                <div class="member-card" data-department="aero">
+                    <div class="member-photo"></div>
+                    <h3>NASRI Yacine</h3>
+                    <p class="member-role">Composites & Fabrication</p>
+                    <span class="member-dept">Aerodynamics</span>
+                </div>
+                <div class="member-card" data-department="aero">
+                    <div class="member-photo"></div>
+                    <h3>AOUN Ayoub</h3>
+                    <p class="member-role">CAD</p>
+                    <span class="member-dept">Aerodynamics</span>
+                </div>
+                <div class="member-card" data-department="aero">
+                    <div class="member-photo"></div>
+                    <h3>TOUHAMI Moulay</h3>
+                    <p class="member-role">Aero Engineer</p>
+                    <span class="member-dept">Aerodynamics</span>
+                </div>
+
+                <!-- OPERATIONS DEPARTMENT -->
+                <div class="member-card" data-department="operations">
+                    <div class="member-photo"></div>
+                    <h3>BAOUCHI Hammouda</h3>
+                    <p class="member-role">Achat & Logistics</p>
+                    <span class="member-dept">Operations</span>
+                </div>
+                <div class="member-card" data-department="operations">
+                    <div class="member-photo"></div>
+                    <h3>DJOUADI Asma</h3>
+                    <p class="member-role">Sous-traitance & Coordination</p>
+                    <span class="member-dept">Operations</span>
+                </div>
+                <div class="member-card" data-department="operations">
+                    <div class="member-photo"></div>
+                    <h3>ZITOUNE Ahmed Yassine</h3>
+                    <p class="member-role">Achats</p>
+                    <span class="member-dept">Operations</span>
+                </div>
+
+                <!-- COMMUNICATION TEAM -->
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>MEGUELLATI Moncef</h3>
+                    <p class="member-role">Communication Lead</p>
+                    <span class="member-dept">Communication</span>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>HAMMADI Nesrine</h3>
+                    <p class="member-role">Media Manager</p>
+                    <span class="member-dept">Communication</span>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>BENKEMOUM Meriem</h3>
+                    <p class="member-role">Communication</p>
+                    <span class="member-dept">Communication</span>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>DJEMAA Hala</h3>
+                    <p class="member-role">Communication</p>
+                    <span class="member-dept">Communication</span>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>SAADOUNI Yanis</h3>
+                    <p class="member-role">Communication</p>
+                    <span class="member-dept">Communication</span>
+                </div>
+                <div class="member-card" data-department="communication">
+                    <div class="member-photo"></div>
+                    <h3>BESSAIH Anis</h3>
+                    <p class="member-role">Web Developer</p>
+                    <span class="member-dept">Communication</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPUPS DÉPARTEMENTS -->
+    <div class="popup-overlay" id="popup-structure">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_structure">Structure</h3>
+            <p data-translate="popup_structure_desc">Responsible for chassis design and manufacturing</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-powertrain">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_powertrain">Powertrain</h3>
+            <p data-translate="popup_powertrain_desc">Engine, transmission, and cooling systems</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-aero">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_aero">Aerodynamics</h3>
+            <p data-translate="popup_aero_desc">Wings, undertray, and aerodynamic optimization</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-control">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_control">Control Systems</h3>
+            <p data-translate="popup_control_desc">Electronics, sensors, and data acquisition</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-operations">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_operations">Operations</h3>
+            <p data-translate="popup_operations_desc">Project management, budget, and logistics</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-communication">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h3 data-translate="dept_communication">Communication</h3>
+            <p data-translate="popup_communication_desc">Media, social networks, and public relations</p>
+        </div>
+    </div>
+
+    <!-- THE CAR -->
+    <section id="car" class="section dark">
+        <div class="container">
+            <h2 data-translate="car_title">ERT-01</h2>
+            <p class="subtitle" data-translate="car_subtitle">Our first Formula Student combustion car</p>
+
+            <div class="car-hero-placeholder">
+                <p data-translate="car_360">360° Car Render</p>
+            </div>
+
+            <!-- Specs -->
+            <div class="car-specs">
+                <div class="spec">
+                    <strong data-translate="spec_category">Category</strong>
+                    <span data-translate="spec_combustion">Combustion</span>
+                </div>
+                <div class="spec">
+                    <strong data-translate="spec_chassis">Chassis</strong>
+                    <span data-translate="spec_tubular">Tubular Steel</span>
+                </div>
+                <div class="spec">
+                    <strong data-translate="spec_engine">Engine</strong>
+                    <span data-translate="spec_4cyl">4-Cylinder Motorcycle</span>
+                </div>
+                <div class="spec">
+                    <strong data-translate="spec_weight">Weight</strong>
+                    <span>210-230 kg</span>
+                </div>
+                <div class="spec">
+                    <strong>0-100 km/h</strong>
+                    <span>&lt; 4.2s</span>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-section">
+                <h3 data-translate="timeline_title">Design Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <time data-translate="timeline_jan">Jan 2026</time>
+                        <h4 data-translate="timeline_concept">Concept</h4>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <time data-translate="timeline_mar">Mar 2026</time>
+                        <h4 data-translate="timeline_cad">CAD Complete</h4>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <time data-translate="timeline_may">May 2026</time>
+                        <h4 data-translate="timeline_manufacturing">Manufacturing</h4>
+                    </div>
+                    <div class="timeline-item active">
+                        <div class="timeline-dot"></div>
+                        <time data-translate="timeline_jul">Jul 2026</time>
+                        <h4 data-translate="timeline_rollout">Roll-out</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOP - COMING SOON -->
+    <section id="shop" class="section">
+        <div class="container">
+            <div class="coming-soon">
+                <h2 data-translate="shop_title">Shop</h2>
+                <div class="coming-soon-content">
+                    <h3 data-translate="coming_soon">COMING SOON</h3>
+                    <p data-translate="coming_soon_desc">Our merchandise store is under construction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART POPUP -->
+    <div class="cart-popup" id="cartPopup">
+        <div class="cart-popup-header">
+            <h3 data-translate="cart_title">Shopping Cart</h3>
+            <button class="cart-close" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty" data-translate="cart_empty">Your cart is empty</p>
+        </div>
+        <div class="cart-total">
+            <strong data-translate="cart_total">Total:</strong>
+            <span id="cartTotal">0 DZD</span>
+        </div>
+        <button class="btn" data-translate="cart_checkout">Checkout</button>
+    </div>
+
+    <!-- PARTNERS -->
+    <section id="partners" class="section dark">
+        <div class="container">
+            <h2 data-translate="partners_title">Our Partners</h2>
+            <p class="subtitle" data-translate="partners_subtitle">Companies supporting our journey</p>
+
+            <div class="partners-grid-simple">
+                <!-- Logos disponibles -->
+                <div class="partner-card">
+                    <img src="logobaouchi.png" alt="Trans Baouchi">
+                </div>
+                <div class="partner-card">
+                    <img src="logoBkFire.png" alt="BkFire">
+                </div>
+                <div class="partner-card">
+                    <img src="logovms.jpeg" alt="VMS">
+                </div>
+                <div class="partner-card">
+                    <img src="logotechnomotiv.jpeg" alt="Technomotiv">
+                </div>
+                <div class="partner-card">
+                    <img src="logoidenet.jpeg" alt="Ide Net">
+                </div>
+                <div class="partner-card">
+                    <img src="logomerbahindustrie.png" alt="Merbah Industrie">
+                </div>
+                <div class="partner-card">
+                    <span>Pima</span>
+                </div>
+                <div class="partner-card">
+                    <img src="logosoneras.jpeg" alt="Soneras">
+                </div>
+                <div class="partner-card">
+                    <span>Karting Évasion Algérie</span>
+                </div>
+                <div class="partner-card">
+                    <span>URIDEV</span>
+                </div>
+                <div class="partner-card">
+                    <span>SARL DTM</span>
+                </div>
+                <div class="partner-card">
+                    <img src="logopurepox.jpeg" alt="Purepox">
+                </div>
+                <div class="partner-card">
+                    <span>Bietmu Plus</span>
+                </div>
+                <div class="partner-card">
+                    <span>Houdine Laskri</span>
+                </div>
+                <div class="partner-card">
+                    <span>Ecorep</span>
+                </div>
+                <div class="partner-card">
+                    <span>ACMP</span>
+                </div>
+                <div class="partner-card">
+                    <img src="logoHKINDUSTRIE.png" alt="HK Industrie">
+                </div>
+                <div class="partner-card">
+                    <span>Power Global</span>
+                </div>
+                <div class="partner-card">
+                    <span>Hamani TPI</span>
+                </div>
+            </div>
+
+            <div class="partner-cta">
+                <h3 data-translate="partners_cta_title">Become a Partner</h3>
+                <p data-translate="partners_cta_desc">Support Algeria's first Formula Student team</p>
+                <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" data-translate="contact_us">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDIA -->
+    <section id="media" class="section">
+        <div class="container">
+            <h2 data-translate="media_title">Media</h2>
+
+            <div class="media-filters">
+                <button class="filter-btn active" data-filter="all" data-translate="filter_all">All</button>
+                <button class="filter-btn" data-filter="workshop" data-translate="filter_workshop">Workshop</button>
+                <button class="filter-btn" data-filter="manufacturing" data-translate="filter_manufacturing">Manufacturing</button>
+                <button class="filter-btn" data-filter="events" data-translate="filter_events">Events</button>
+            </div>
+
+            <div class="media-gallery" id="mediaGallery">
+                <img src="placeholder.jpg" data-src="real-image-1.jpg" class="media-item lazy" data-category="workshop" alt="Workshop" onclick="openLightbox(0)">
+                <img src="placeholder.jpg" data-src="real-image-2.jpg" class="media-item lazy" data-category="manufacturing" alt="Manufacturing" onclick="openLightbox(1)">
+                <img src="placeholder.jpg" data-src="real-image-3.jpg" class="media-item lazy" data-category="events" alt="Event" onclick="openLightbox(2)">
+                <img src="placeholder.jpg" data-src="real-image-4.jpg" class="media-item lazy" data-category="workshop" alt="Workshop" onclick="openLightbox(3)">
+                <img src="placeholder.jpg" data-src="real-image-5.jpg" class="media-item lazy" data-category="manufacturing" alt="Manufacturing" onclick="openLightbox(4)">
+                <img src="placeholder.jpg" data-src="real-image-6.jpg" class="media-item lazy" data-category="events" alt="Event" onclick="openLightbox(5)">
+                <!-- NOUVELLES PHOTOS EVENTS -->
+                <img src="Artboard12.jpg" class="media-item" data-category="events" alt="Minister Visit Event 1" onclick="openLightbox(6)">
+                <img src="Artboard10-1.jpg" class="media-item" data-category="events" alt="Minister Visit Event 2" onclick="openLightbox(7)">
+            </div>
+
+            <div class="press-kit-section">
+                <h3 data-translate="presskit_title">Press Kit</h3>
+                <a href="press-kit.pdf" download class="btn" data-translate="presskit_download">Download Press Kit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <img id="lightboxImage" src="" alt="">
+        <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <!-- NEWS AVEC ARTICLE ET CAROUSEL -->
+    <section id="news" class="section dark">
+        <div class="container">
+            <h2 data-translate="news_title">Latest News</h2>
+            <p class="subtitle" data-translate="news_subtitle">Stay updated with our latest achievements</p>
+
+            <div class="news-grid">
+                <!-- Article principal -->
+                <article class="news-card featured">
+                    <div class="news-image-slider">
+                        <div class="slider-container">
+                            <img src="Artboard10copy2.jpg" alt="Minister Visit 1" class="slider-image active">
+                            <img src="Artboard12copy3.jpg" alt="Minister Visit 2" class="slider-image">
+                            <img src="Artboard11copy.jpg" alt="Minister Visit 3" class="slider-image">
+                        </div>
+                        <button class="slider-btn prev" onclick="changeSlide(-1)">‹</button>
+                        <button class="slider-btn next" onclick="changeSlide(1)">›</button>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="goToSlide(0)"></span>
+                            <span class="dot" onclick="goToSlide(1)"></span>
+                            <span class="dot" onclick="goToSlide(2)"></span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">January 19, 2026</span>
+                        <h3>Meeting with the Minister of Higher Education</h3>
+                        <p>ENP Racing Team had the honor of presenting our Formula Student project to the Minister of Higher Education at the ENP Incubator. This milestone meeting showcased our team's dedication and innovation in building Algeria's first combustion Formula Student car.</p>
+                        <p>The Minister expressed strong support for our initiative and emphasized the importance of such projects in developing Algeria's engineering capabilities and fostering innovation among students.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN US (sans vidéo) -->
+    <section id="joinus" class="section">
+        <div class="container">
+            <h2 data-translate="joinus_title">Join Us</h2>
+            <p class="subtitle" data-translate="joinus_subtitle">Be part of Algeria's Formula Student history</p>
+
+            <div class="join-cta">
+                <h3 data-translate="joinus_cta_title">Ready to Join?</h3>
+                <p data-translate="joinus_cta_desc">Applications are open for passionate engineering students</p>
+                <p data-translate="contact_for_info">Contact us for more information about joining the team</p>
+                <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" data-translate="contact_us">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT avec Formspree -->
+    <section id="contact" class="section dark">
+        <div class="container">
+            <h2 data-translate="contact_title">Contact Us</h2>
+
+            <div class="contact-wrapper">
+                <!-- Formulaire avec Formspree -->
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" data-translate-placeholder="form_name" required>
+                    <input type="email" name="_replyto" placeholder="Your Email" data-translate-placeholder="form_email" required>
+                    <input type="text" name="subject" placeholder="Subject" data-translate-placeholder="form_subject" required>
+                    <textarea name="message" placeholder="Your Message" data-translate-placeholder="form_message" rows="5" required></textarea>
+                    <button type="submit" class="btn" data-translate="form_send">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3 data-translate="contact_info_title">Get in Touch</h3>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <a href="mailto:enp_racingteam@g.enp.edu.dz">enp_racingteam@g.enp.edu.dz</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <p>0540 859 277<br>0540 024 003</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <p data-translate="contact_address">École Nationale Polytechnique<br>Algiers, Algeria</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>📷</span>
+                        <a href="https://www.instagram.com/enp_racing.team" target="_blank">@enp_racing.team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box">
+                <h3 data-translate="newsletter_title">Stay Updated</h3>
+                <p data-translate="newsletter_desc">Get the latest news and updates from ENP Racing Team</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email" data-translate-placeholder="newsletter_email" required>
+                    <button type="submit" class="btn" data-translate="newsletter_subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Logoertblanc.png" alt="ERT Logo" class="footer-logo">
+                    <p data-translate="footer_tagline">First Algerian Formula Student Team</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-translate="footer_quicklinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#team" data-translate="nav_team">Team</a></li>
+                        <li><a href="#car" data-translate="nav_car">The Car</a></li>
+                        <li><a href="#shop" data-translate="nav_shop">Shop</a></li>
+                        <li><a href="#joinus" data-translate="nav_joinus">Join Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-translate="footer_followus">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/enp_racing.team" target="_blank">Instagram</a>
+                        <a href="https://www.linkedin.com/company/enp-racing-team" target="_blank">LinkedIn</a>
+                        <a href="https://youtube.com/@enpracingteam" target="_blank">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 ENP Racing Team. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE BOTTOM NAV -->
+    <nav class="mobile-bottom-nav">
+        <a href="#home" class="mobile-nav-item">
+            <span>🏠</span>
+            <span data-translate="nav_home">Home</span>
+        </a>
+        <a href="#team" class="mobile-nav-item">
+            <span>👥</span>
+            <span data-translate="nav_team">Team</span>
+        </a>
+        <a href="#car" class="mobile-nav-item">
+            <span>🏎️</span>
+            <span data-translate="nav_car">Car</span>
+        </a>
+        <a href="#shop" class="mobile-nav-item">
+            <span>🛍️</span>
+            <span data-translate="nav_shop">Shop</span>
+        </a>
+        <a href="#contact" class="mobile-nav-item">
+            <span>✉️</span>
+            <span data-translate="nav_contact">Contact</span>
+        </a>
+    </nav>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="kill.js"></script>
+</body>
+</html>
