@@ -786,4 +786,26 @@
         </a>
     </nav>
 
-    <button class="back
+    <button class="back-to-top" id="backToTop">&#8593;</button>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        // Fix loading screen stuck infinitely
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.style.display = 'none';
+            }
+        });
+        // Fallback: hide after 3 seconds no matter what
+        setTimeout(function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.style.display = 'none';
+            }
+        }, 3000);
+    </script>
+    <script src="kill.js"></script>
+</body>
+</html>
