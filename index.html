@@ -35,7 +35,7 @@
         .partners-carousel-track {
             display: flex;
             gap: 1.5rem;
-            animation: scrollCarousel 30s linear infinite;
+            animation: scrollCarousel 60s linear infinite;
             width: max-content;
         }
         .partners-carousel-wrapper:hover .partners-carousel-track {
@@ -378,8 +378,8 @@
             </div>
 
             <!-- BOUTON VOIR TOUS -->
-            <button class="partners-see-all-btn" id="seeAllBtn" onclick="toggleAllPartners()">
-                Voir tous les sponsors
+            <button class="partners-see-all-btn" id="seeAllBtn" onclick="toggleAllPartners()" data-translate="see_all_sponsors">
+                See all sponsors
             </button>
 
             <!-- GRILLE COMPLÈTE (cachée par défaut) -->
@@ -593,7 +593,7 @@
             const btn  = document.getElementById('seeAllBtn');
             const isVisible = grid.classList.contains('visible');
             grid.classList.toggle('visible');
-            btn.textContent = isVisible ? 'Voir tous les sponsors' : 'Réduire';
+            btn.textContent = isVisible ? 'See all sponsors' : 'Réduire';
             if (!isVisible) {
                 grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
