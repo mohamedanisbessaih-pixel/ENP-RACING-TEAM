@@ -105,6 +105,70 @@
         .all-partners-grid.visible {
             display: grid;
         }
+        .partners-category-title {
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 2rem 0 1rem;
+            padding: 0.4rem 1.5rem;
+            border-left: 4px solid #e63946;
+            color: #e63946;
+            background: rgba(230,57,70,0.07);
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+        }
+        .partners-category-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .all-partner-card {
+            position: relative;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-width: 130px;
+            max-width: 160px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .all-partner-card:hover { transform: translateY(-4px); border-color: #e63946; }
+        .all-partner-card img { max-width: 90px; max-height: 55px; object-fit: contain; filter: brightness(0) invert(1); }
+        .pack-badge {
+            position: absolute;
+            top: -8px; right: -8px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 20px;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        .pack-v2 .pack-badge { background: #e63946; }
+        .pack-v1 .pack-badge { background: #f4a261; }
+        .partner-name { font-size: 0.75rem; color: #ccc; text-align: center; }
+        .partner-name-only { font-size: 0.95rem; font-weight: 600; color: #fff; text-align: center; }
+        .all-partners-grid {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        .all-partners-grid.visible { display: flex; }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -329,78 +393,127 @@
             <h2 data-translate="partners_title">Our Partners</h2>
             <p class="subtitle" data-translate="partners_subtitle">Companies supporting our journey</p>
 
-            <!-- CAROUSEL (défilement automatique) -->
+            <!-- CAROUSEL automatique -->
             <div class="partners-carousel-wrapper">
                 <div class="partners-carousel-track" id="partnersCarouselTrack">
-                    <!-- Les cartes sont dupliquées pour un effet infini -->
-                    <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
-                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BkFire"></div>
-                    <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
-                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technomotiv"></div>
-                    <div class="carousel-partner-card"><img src="logoidenet.jpeg" alt="Ide Net"></div>
-                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
-                    <div class="carousel-partner-card"><span>Pima</span></div>
-                    <div class="carousel-partner-card"><img src="logosoneras.jpeg" alt="Soneras"></div>
-                    <div class="carousel-partner-card"><span>Karting Évasion Algérie</span></div>
-                    <div class="carousel-partner-card"><span>URIDEV</span></div>
-                    <div class="carousel-partner-card"><span>SARL DTM</span></div>
+                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technocast"></div>
                     <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
-                    <div class="carousel-partner-card"><span>Bietmu Plus</span></div>
-                    <div class="carousel-partner-card"><span>Houdine Laskri</span></div>
-                    <div class="carousel-partner-card"><span>Ecorep</span></div>
-                    <div class="carousel-partner-card"><span>ACMP</span></div>
+                    <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
+                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
+                    <div class="carousel-partner-card"><img src="logoidenet.jpeg" alt="Ide Net"></div>
                     <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
-                    <div class="carousel-partner-card"><span>Power Global</span></div>
-                    <div class="carousel-partner-card"><span>Hamani TPI</span></div>
+                    <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
+                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
+                    <div class="carousel-partner-card"><img src="logosoneras.jpeg" alt="Soneras"></div>
                     <!-- Duplicata pour loop infini -->
-                    <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
-                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BkFire"></div>
-                    <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
-                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technomotiv"></div>
-                    <div class="carousel-partner-card"><img src="logoidenet.jpeg" alt="Ide Net"></div>
-                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
-                    <div class="carousel-partner-card"><span>Pima</span></div>
-                    <div class="carousel-partner-card"><img src="logosoneras.jpeg" alt="Soneras"></div>
-                    <div class="carousel-partner-card"><span>Karting Évasion Algérie</span></div>
-                    <div class="carousel-partner-card"><span>URIDEV</span></div>
-                    <div class="carousel-partner-card"><span>SARL DTM</span></div>
+                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technocast"></div>
                     <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
-                    <div class="carousel-partner-card"><span>Bietmu Plus</span></div>
-                    <div class="carousel-partner-card"><span>Houdine Laskri</span></div>
-                    <div class="carousel-partner-card"><span>Ecorep</span></div>
-                    <div class="carousel-partner-card"><span>ACMP</span></div>
+                    <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
+                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
+                    <div class="carousel-partner-card"><img src="logoidenet.jpeg" alt="Ide Net"></div>
                     <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
-                    <div class="carousel-partner-card"><span>Power Global</span></div>
-                    <div class="carousel-partner-card"><span>Hamani TPI</span></div>
+                    <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
+                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
+                    <div class="carousel-partner-card"><img src="logosoneras.jpeg" alt="Soneras"></div>
                 </div>
             </div>
 
-            <!-- BOUTON VOIR TOUS -->
-            <button class="partners-see-all-btn" id="seeAllBtn" onclick="toggleAllPartners()" data-translate="see_all_sponsors">
-                See all sponsors
+            <!-- BOUTON VOIR PLUS -->
+            <button class="partners-see-all-btn" id="seeAllBtn" onclick="toggleAllPartners()">
+                See More Partners
             </button>
 
             <!-- GRILLE COMPLÈTE (cachée par défaut) -->
             <div class="all-partners-grid" id="allPartnersGrid">
-                <div class="all-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
-                <div class="all-partner-card"><img src="logoBkFire.png" alt="BkFire"></div>
-                <div class="all-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
-                <div class="all-partner-card"><img src="logotechnomotiv.jpeg" alt="Technomotiv"></div>
-                <div class="all-partner-card"><img src="logoidenet.jpeg" alt="Ide Net"></div>
-                <div class="all-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
-                <div class="all-partner-card"><span>Pima</span></div>
-                <div class="all-partner-card"><img src="logosoneras.jpeg" alt="Soneras"></div>
-                <div class="all-partner-card"><span>Karting Évasion Algérie</span></div>
-                <div class="all-partner-card"><span>URIDEV</span></div>
-                <div class="all-partner-card"><span>SARL DTM</span></div>
-                <div class="all-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
-                <div class="all-partner-card"><span>Bietmu Plus</span></div>
-                <div class="all-partner-card"><span>Houdine Laskri</span></div>
-                <div class="all-partner-card"><span>Ecorep</span></div>
-                <div class="all-partner-card"><span>ACMP</span></div>
-                <div class="all-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
-                <div class="all-partner-card"><span>Power Global</span></div>
-                <div class="all-partner-card"><span>Hamani TPI</span></div>
+
+                <!-- PACK V2 -->
+                <div class="partners-category-title">Pack V2</div>
+                <div class="partners-category-grid">
+                    <div class="all-partner-card pack-v2">
+                        <div class="pack-badge">V2</div>
+                        <img src="logotechnomotiv.jpeg" alt="Technocast">
+                        <span class="partner-name">Technocast</span>
+                    </div>
+                    <div class="all-partner-card pack-v2">
+                        <div class="pack-badge">V2</div>
+                        <img src="logopurepox.jpeg" alt="Purepox">
+                        <span class="partner-name">Purepox</span>
+                    </div>
+                </div>
+
+                <!-- PACK V1 -->
+                <div class="partners-category-title">Pack V1</div>
+                <div class="partners-category-grid">
+                    <div class="all-partner-card pack-v1">
+                        <div class="pack-badge">V1</div>
+                        <img src="logobaouchi.png" alt="Trans Baouchi">
+                        <span class="partner-name">Trans Baouchi</span>
+                    </div>
+                    <div class="all-partner-card pack-v1">
+                        <div class="pack-badge">V1</div>
+                        <img src="logoBkFire.png" alt="BK Fire">
+                        <span class="partner-name">BK Fire</span>
+                    </div>
+                    <div class="all-partner-card pack-v1">
+                        <div class="pack-badge">V1</div>
+                        <img src="logoidenet.jpeg" alt="Ide Net">
+                        <span class="partner-name">Ide Net</span>
+                    </div>
+                    <div class="all-partner-card pack-v1">
+                        <div class="pack-badge">V1</div>
+                        <img src="logoHKINDUSTRIE.png" alt="HK Industrie">
+                        <span class="partner-name">HK Industrie</span>
+                    </div>
+                    <div class="all-partner-card pack-v1">
+                        <div class="pack-badge">V1</div>
+                        <span class="partner-name-only">IPG Car Maker</span>
+                    </div>
+                    <div class="all-partner-card pack-v1">
+                        <div class="pack-badge">V1</div>
+                        <span class="partner-name-only">Toyota</span>
+                    </div>
+                    <div class="all-partner-card pack-v1">
+                        <div class="pack-badge">V1</div>
+                        <span class="partner-name-only">Fluidex</span>
+                    </div>
+                    <div class="all-partner-card pack-v1">
+                        <div class="pack-badge">V1</div>
+                        <span class="partner-name-only">SLB</span>
+                    </div>
+                </div>
+
+                <!-- AUTRES SPONSORS -->
+                <div class="partners-category-title">Other Sponsors</div>
+                <div class="partners-category-grid">
+                    <div class="all-partner-card pack-other">
+                        <span class="partner-name-only">Dassault Systèmes</span>
+                    </div>
+                    <div class="all-partner-card pack-other">
+                        <span class="partner-name-only">Ansys</span>
+                    </div>
+                    <div class="all-partner-card pack-other">
+                        <span class="partner-name-only">Rapidharness</span>
+                    </div>
+                    <div class="all-partner-card pack-other">
+                        <span class="partner-name-only">Mathworks</span>
+                    </div>
+                    <div class="all-partner-card pack-other">
+                        <img src="logovms.jpeg" alt="VMS">
+                        <span class="partner-name">VMS</span>
+                    </div>
+                    <div class="all-partner-card pack-other">
+                        <img src="logomerbahindustrie.png" alt="Merbah Industrie">
+                        <span class="partner-name">Merbah Industrie</span>
+                    </div>
+                    <div class="all-partner-card pack-other">
+                        <img src="logosoneras.jpeg" alt="Soneras">
+                        <span class="partner-name">Soneras</span>
+                    </div>
+                    <div class="all-partner-card pack-other">
+                        <span class="partner-name-only">Brenco Expertise</span>
+                    </div>
+                </div>
+
             </div>
 
             <div class="partner-cta">
@@ -507,7 +620,7 @@
                 </form>
                 <div class="contact-info">
                     <h3 data-translate="contact_info_title">Get in Touch</h3>
-                    <div class="contact-item"><span></span><a href="mailto:enp_racingteam@g.enp.edu.dz">enp_racingteam@g.enp.edu.dz</a></div>
+                    <div class="contact-item"><span></span><a href="/cdn-cgi/l/email-protection#05606b755a7764666c6b627160646845622b606b752b6061702b617f"><span class="__cf_email__" data-cfemail="bedbd0cee1ccdfddd7d0d9cadbdfd3fed990dbd0ce90dbdacb90dac4">[email&#160;protected]</span></a></div>
                     <div class="contact-item"><span></span><p>0540 859 277<br>0540 024 003</p></div>
                     <div class="contact-item"><span></span><p data-translate="contact_address">École Nationale Polytechnique<br>Algiers, Algeria</p></div>
                     <div class="contact-item"><span></span><a href="https://www.instagram.com/enp_racing.team" target="_blank">@enp_racing.team</a></div>
@@ -574,7 +687,7 @@
     <button class="back-to-top" id="backToTop">&#8593;</button>
     <div class="toast-container" id="toastContainer"></div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Fix loading screen
         window.addEventListener('load', function() {
             const ls = document.getElementById('loadingScreen');
@@ -591,10 +704,7 @@
             const btn  = document.getElementById('seeAllBtn');
             const isVisible = grid.classList.contains('visible');
             grid.classList.toggle('visible');
-            btn.textContent = isVisible ? 'See all sponsors' : 'Réduire';
-            if (!isVisible) {
-                grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            btn.textContent = isVisible ? 'See More Partners' : 'See Less Partners';
         }
     </script>
     <script src="kill.js"></script>
