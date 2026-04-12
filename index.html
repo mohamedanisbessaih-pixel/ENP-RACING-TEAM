@@ -25,9 +25,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="junior.css">
 
-    <!-- Spline 3D Viewer -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.81/build/spline-viewer.js"></script>
-
     <style>
         /* ── PARTNERS CAROUSEL ── */
         .partners-carousel-wrapper {
@@ -61,14 +58,11 @@
             flex-shrink: 0;
             transition: background 0.3s;
         }
-        .carousel-partner-card:hover {
-            background: rgba(255,255,255,0.15);
-        }
+        .carousel-partner-card:hover { background: rgba(255,255,255,0.15); }
         .carousel-partner-card img {
             max-width: 120px;
             max-height: 70px;
             object-fit: contain;
-            opacity: 1;
         }
         .carousel-partner-card span {
             color: #fff;
@@ -97,17 +91,6 @@
             color: #fff;
         }
 
-        /* ── ALL PARTNERS GRID (hidden by default) ── */
-        .all-partners-grid {
-            display: none;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 1.2rem;
-            margin-bottom: 2rem;
-            animation: fadeIn 0.4s ease;
-        }
-        .all-partners-grid.visible {
-            display: grid;
-        }
         .partners-category-title {
             width: 100%;
             font-size: 1.2rem;
@@ -134,35 +117,6 @@
             width: 100%;
             margin-bottom: 0.5rem;
         }
-        .all-partner-card {
-            position: relative;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 12px;
-            padding: 1.4rem 1.6rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
-            width: 160px;
-            height: 100px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-            transition: transform 0.25s, box-shadow 0.25s;
-            overflow: visible;
-        }
-        .all-partner-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 24px rgba(230,57,70,0.25);
-        }
-        .all-partner-card img {
-            max-width: 110px;
-            max-height: 55px;
-            object-fit: contain;
-            background: #fff;
-            border-radius: 6px;
-            padding: 6px;
-        }
         .pack-badge {
             position: absolute;
             top: -10px;
@@ -184,13 +138,6 @@
             text-align: center;
             line-height: 1.2;
         }
-        .partner-name-only {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #fff;
-            text-align: center;
-            line-height: 1.3;
-        }
         .all-partners-grid {
             display: none;
             flex-direction: column;
@@ -204,36 +151,45 @@
             border: 1px solid rgba(255,255,255,0.07);
         }
         .all-partners-grid.visible { display: flex; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
         .all-partner-card {
+            position: relative;
             background: rgba(255,255,255,0.07);
             border: 1px solid rgba(255,255,255,0.12);
             border-radius: 12px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 0.6rem;
+            width: 160px;
+            height: 100px;
             padding: 1rem;
-            height: 90px;
-            transition: background 0.3s;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            transition: transform 0.25s, box-shadow 0.25s;
+            overflow: visible;
         }
         .all-partner-card:hover {
-            background: rgba(255,255,255,0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(230,57,70,0.25);
         }
         .all-partner-card img {
             max-width: 110px;
-            max-height: 60px;
+            max-height: 55px;
             object-fit: contain;
-            opacity: 1;
+            background: #fff;
+            border-radius: 6px;
+            padding: 6px;
         }
         .all-partner-card span {
             color: #fff;
             font-weight: 600;
             font-size: 0.82rem;
             text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         /* ── 3D CAR SECTION ── */
@@ -261,10 +217,11 @@
                 0 20px 60px rgba(0,0,0,0.5);
             position: relative;
         }
-        .car3d-wrapper spline-viewer {
+        .car3d-wrapper iframe {
             width: 100%;
             height: 100%;
             display: block;
+            border: none;
         }
         .car3d-hint {
             margin-top: 1rem;
@@ -278,6 +235,26 @@
                 height: 380px;
                 border-radius: 12px;
             }
+        }
+
+        /* ── SOCIAL LINKS CLIQUABLES ── */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .social-links a {
+            color: #e63946 !important;
+            text-decoration: none !important;
+            font-weight: 600;
+            transition: color 0.3s, opacity 0.3s;
+            pointer-events: all !important;
+            cursor: pointer !important;
+            display: inline-block;
+        }
+        .social-links a:hover {
+            color: #fff !important;
+            text-decoration: underline !important;
         }
     </style>
 </head>
@@ -346,7 +323,11 @@
             <h2>Our Car</h2>
             <p class="subtitle">ERT-01 — Interactive 3D Model</p>
             <div class="car3d-wrapper">
-                <spline-viewer url="https://prod.spline.design/yjb-sPqNRde6fl7P/scene.splinecode"></spline-viewer>
+                <iframe src='https://my.spline.design/untitled-3kND1iKwCB5tCWhGSqAJV4cI/'
+                        frameborder='0'
+                        width='100%'
+                        height='100%'>
+                </iframe>
             </div>
             <p class="car3d-hint">🖱️ Drag to rotate &nbsp;·&nbsp; Scroll to zoom &nbsp;·&nbsp; Right-click to pan</p>
         </div>
@@ -486,7 +467,6 @@
             <h2 data-translate="partners_title">Our Partners</h2>
             <p class="subtitle" data-translate="partners_subtitle">Companies supporting our journey</p>
 
-            <!-- CAROUSEL automatique -->
             <div class="partners-carousel-wrapper">
                 <div class="partners-carousel-track" id="partnersCarouselTrack">
                     <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
@@ -499,7 +479,6 @@
                     <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technocast"></div>
                     <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
                     <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
-                    <!-- Duplicata pour loop infini -->
                     <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
                     <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
                     <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
@@ -513,15 +492,11 @@
                 </div>
             </div>
 
-            <!-- BOUTON VOIR PLUS -->
             <button class="partners-see-all-btn" id="seeAllBtn" onclick="toggleAllPartners()">
                 See More Partners
             </button>
 
-            <!-- GRILLE COMPLÈTE (cachée par défaut) -->
             <div class="all-partners-grid" id="allPartnersGrid">
-
-                <!-- PACK V2 -->
                 <div class="partners-category-title">Pack V2</div>
                 <div class="partners-category-grid">
                     <div class="all-partner-card pack-v2">
@@ -536,76 +511,26 @@
                     </div>
                 </div>
 
-                <!-- PACK V1 -->
                 <div class="partners-category-title">Pack V1</div>
                 <div class="partners-category-grid">
-                    <div class="all-partner-card pack-v1">
-                        <div class="pack-badge">V1</div>
-                        <img src="logoHKINDUSTRIE.png" alt="HK Industrie">
-                        <span class="partner-name">HK Industrie</span>
-                    </div>
-                    <div class="all-partner-card pack-v1">
-                        <div class="pack-badge">V1</div>
-                        <img src="logotoyota.png" alt="Toyota">
-                        <span class="partner-name">Toyota</span>
-                    </div>
-                    <div class="all-partner-card pack-v1">
-                        <div class="pack-badge">V1</div>
-                        <img src="logoslb.png" alt="SLB">
-                        <span class="partner-name">SLB</span>
-                    </div>
-                    <div class="all-partner-card pack-v1">
-                        <div class="pack-badge">V1</div>
-                        <img src="logofluidex.png" alt="Fluidex">
-                        <span class="partner-name">Fluidex</span>
-                    </div>
-                    <div class="all-partner-card pack-v1">
-                        <div class="pack-badge">V1</div>
-                        <img src="logomerbahindustrie.png" alt="Merbah Industrie">
-                        <span class="partner-name">Merbah Industrie</span>
-                    </div>
-                    <div class="all-partner-card pack-v1">
-                        <div class="pack-badge">V1</div>
-                        <img src="logotechnomotiv.jpeg" alt="Technocast">
-                        <span class="partner-name">Technocast</span>
-                    </div>
-                    <div class="all-partner-card pack-v1">
-                        <div class="pack-badge">V1</div>
-                        <img src="logoBkFire.png" alt="BK Fire">
-                        <span class="partner-name">BK Fire</span>
-                    </div>
-                    <div class="all-partner-card pack-v1">
-                        <div class="pack-badge">V1</div>
-                        <img src="logobaouchi.png" alt="Trans Baouchi">
-                        <span class="partner-name">Trans Baouchi</span>
-                    </div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoHKINDUSTRIE.png" alt="HK Industrie"><span class="partner-name">HK Industrie</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotoyota.png" alt="Toyota"><span class="partner-name">Toyota</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoslb.png" alt="SLB"><span class="partner-name">SLB</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logofluidex.png" alt="Fluidex"><span class="partner-name">Fluidex</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logomerbahindustrie.png" alt="Merbah Industrie"><span class="partner-name">Merbah Industrie</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotechnomotiv.jpeg" alt="Technocast"><span class="partner-name">Technocast</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoBkFire.png" alt="BK Fire"><span class="partner-name">BK Fire</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logobaouchi.png" alt="Trans Baouchi"><span class="partner-name">Trans Baouchi</span></div>
                 </div>
 
-                <!-- AUTRES SPONSORS -->
                 <div class="partners-category-title">Other Sponsors</div>
                 <div class="partners-category-grid">
-                    <div class="all-partner-card pack-other">
-                        <img src="logoipg.png" alt="IPG Car Maker">
-                        <span class="partner-name">IPG Car Maker</span>
-                    </div>
-                    <div class="all-partner-card pack-other">
-                        <img src="logodassault.png" alt="Dassault Systèmes">
-                        <span class="partner-name">Dassault Systèmes</span>
-                    </div>
-                    <div class="all-partner-card pack-other">
-                        <img src="logoansys.png" alt="Ansys">
-                        <span class="partner-name">Ansys</span>
-                    </div>
-                    <div class="all-partner-card pack-other">
-                        <img src="logorapidharness.png" alt="Rapidharness">
-                        <span class="partner-name">Rapidharness</span>
-                    </div>
-                    <div class="all-partner-card pack-other">
-                        <img src="logomathworks.png" alt="Mathworks">
-                        <span class="partner-name">Mathworks</span>
-                    </div>
+                    <div class="all-partner-card pack-other"><img src="logoipg.png" alt="IPG Car Maker"><span class="partner-name">IPG Car Maker</span></div>
+                    <div class="all-partner-card pack-other"><img src="logodassault.png" alt="Dassault Systèmes"><span class="partner-name">Dassault Systèmes</span></div>
+                    <div class="all-partner-card pack-other"><img src="logoansys.png" alt="Ansys"><span class="partner-name">Ansys</span></div>
+                    <div class="all-partner-card pack-other"><img src="logorapidharness.png" alt="Rapidharness"><span class="partner-name">Rapidharness</span></div>
+                    <div class="all-partner-card pack-other"><img src="logomathworks.png" alt="Mathworks"><span class="partner-name">Mathworks</span></div>
                 </div>
-
             </div>
 
             <div class="partner-cta">
@@ -712,7 +637,7 @@
                 </form>
                 <div class="contact-info">
                     <h3 data-translate="contact_info_title">Get in Touch</h3>
-                    <div class="contact-item"><span></span><a href="/cdn-cgi/l/email-protection#05606b755a7764666c6b627160646845622b606b752b6061702b617f"><span class="__cf_email__" data-cfemail="bedbd0cee1ccdfddd7d0d9cadbdfd3fed990dbd0ce90dbdacb90dac4">[email&#160;protected]</span></a></div>
+                    <div class="contact-item"><span></span><a href="mailto:enp.racing.team@gmail.com">enp.racing.team@gmail.com</a></div>
                     <div class="contact-item"><span></span><p>0540 859 277<br>0540 024 003</p></div>
                     <div class="contact-item"><span></span><p data-translate="contact_address">École Nationale Polytechnique<br>Algiers, Algeria</p></div>
                     <div class="contact-item"><span></span><a href="https://www.instagram.com/enp_racing.team" target="_blank">@enp_racing.team</a></div>
@@ -756,9 +681,9 @@
                 <div class="footer-social">
                     <h4 data-translate="footer_followus">Follow Us</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/enp_racing.team" target="_blank">Instagram</a>
-                        <a href="https://www.linkedin.com/company/enp-racing-team" target="_blank">LinkedIn</a>
-                        <a href="https://youtube.com/@enpracingteam" target="_blank">YouTube</a>
+                        <a href="https://www.instagram.com/enp_racing.team" target="_blank" rel="noopener">Instagram</a>
+                        <a href="https://www.linkedin.com/company/enp-racing-team" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://youtube.com/@enpracingteam" target="_blank" rel="noopener">YouTube</a>
                     </div>
                 </div>
             </div>
@@ -779,9 +704,7 @@
     <button class="back-to-top" id="backToTop">&#8593;</button>
     <div class="toast-container" id="toastContainer"></div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
-        // Fix loading screen
         window.addEventListener('load', function() {
             const ls = document.getElementById('loadingScreen');
             if (ls) ls.style.display = 'none';
@@ -791,7 +714,6 @@
             if (ls) ls.style.display = 'none';
         }, 3000);
 
-        // Toggle all partners grid
         function toggleAllPartners() {
             const grid = document.getElementById('allPartnersGrid');
             const btn  = document.getElementById('seeAllBtn');
