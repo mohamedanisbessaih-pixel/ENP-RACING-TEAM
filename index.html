@@ -271,6 +271,76 @@
             }
         }
 
+        .dept-abbr {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            background: rgba(230, 57, 70, 0.15);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .org-dept.active {
+            background: rgba(230, 57, 70, 0.2);
+            border-color: var(--primary);
+        }
+        .lead-label {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .dept-lead-name {
+            color: var(--light);
+            font-size: 0.9rem;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+        .dept-member-count {
+            color: var(--accent);
+            font-size: 0.78rem;
+            margin-top: 6px;
+        }
+        .dept-members-panel {
+            margin-top: 40px;
+            animation: fadeInUp 0.4s ease;
+        }
+        .dept-members-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary);
+        }
+        .dept-members-header span {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .dept-close-btn {
+            background: var(--primary);
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .dept-close-btn:hover {
+            background: #ff0000;
+            transform: rotate(90deg);
+        }
+
         /* ── LEADERSHIP SECTION ── */
         .leadership-section {
             display: flex;
@@ -506,104 +576,54 @@
             </div>
 
             <!-- DÉPARTEMENTS -->
-            <div class="orgchart-container">
-                <div class="org-dept" data-popup="structure">
-                    <span class="dept-icon">🏗️</span>
+            <div class="orgchart-container" id="deptCards">
+                <div class="org-dept" data-dept="structure" onclick="toggleDept('structure', this)">
+                    <span class="dept-icon dept-abbr">STR</span>
                     <h4>Structure</h4>
-                    <p class="dept-lead-name">Driouche Ayoub</p>
-                    <p class="dept-member-count">7 membres · cliquez pour voir</p>
+                    <p class="dept-lead-name"><span class="lead-label">Lead —</span> Driouche Ayoub</p>
+                    <p class="dept-member-count">7 membres</p>
                 </div>
-                <div class="org-dept" data-popup="aero">
-                    <span class="dept-icon">💨</span>
+                <div class="org-dept" data-dept="aero" onclick="toggleDept('aero', this)">
+                    <span class="dept-icon dept-abbr">AERO</span>
                     <h4>Aérodynamique</h4>
-                    <p class="dept-lead-name">Benaïda Haïthem</p>
-                    <p class="dept-member-count">2 membres · cliquez pour voir</p>
+                    <p class="dept-lead-name"><span class="lead-label">Lead —</span> Benaïda Haïthem</p>
+                    <p class="dept-member-count">2 membres</p>
                 </div>
-                <div class="org-dept" data-popup="powertrain">
-                    <span class="dept-icon">⚙️</span>
-                    <h4>Groupe Motopropulseur</h4>
-                    <p class="dept-lead-name">Abdallah Azem Chettibi</p>
-                    <p class="dept-member-count">11 membres · cliquez pour voir</p>
+                <div class="org-dept" data-dept="powertrain" onclick="toggleDept('powertrain', this)">
+                    <span class="dept-icon dept-abbr">MOTO</span>
+                    <h4>Motopropulseur</h4>
+                    <p class="dept-lead-name"><span class="lead-label">Lead —</span> Abdallah Azem Chettibi</p>
+                    <p class="dept-member-count">11 membres</p>
                 </div>
-                <div class="org-dept" data-popup="control">
-                    <span class="dept-icon">⚡</span>
+                <div class="org-dept" data-dept="control" onclick="toggleDept('control', this)">
+                    <span class="dept-icon dept-abbr">C&E</span>
                     <h4>Contrôle & Électronique</h4>
-                    <p class="dept-lead-name">Khial Ibrahim</p>
-                    <p class="dept-member-count">9 membres · cliquez pour voir</p>
+                    <p class="dept-lead-name"><span class="lead-label">Lead —</span> Khial Ibrahim</p>
+                    <p class="dept-member-count">9 membres</p>
                 </div>
-                <div class="org-dept" data-popup="operations">
-                    <span class="dept-icon">📊</span>
+                <div class="org-dept" data-dept="operations" onclick="toggleDept('operations', this)">
+                    <span class="dept-icon dept-abbr">OPS</span>
                     <h4>Opérations</h4>
-                    <p class="dept-lead-name">Baouchi Hammouda</p>
-                    <p class="dept-member-count">5 membres · cliquez pour voir</p>
+                    <p class="dept-lead-name"><span class="lead-label">Lead —</span> Baouchi Hammouda</p>
+                    <p class="dept-member-count">5 membres</p>
                 </div>
-                <div class="org-dept" data-popup="communication">
-                    <span class="dept-icon">📢</span>
+                <div class="org-dept" data-dept="communication" onclick="toggleDept('communication', this)">
+                    <span class="dept-icon dept-abbr">COM</span>
                     <h4>Communication & Médias</h4>
-                    <p class="dept-lead-name">Meguellati Moncef</p>
-                    <p class="dept-member-count">8 membres · cliquez pour voir</p>
+                    <p class="dept-lead-name"><span class="lead-label">Lead —</span> Meguellati Moncef</p>
+                    <p class="dept-member-count">8 membres</p>
                 </div>
             </div>
 
-            <div class="team-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="structure">Structure</button>
-                <button class="filter-btn" data-filter="aero">Aéro</button>
-                <button class="filter-btn" data-filter="powertrain">Motopropulseur</button>
-                <button class="filter-btn" data-filter="control">Contrôle & Élec</button>
-                <button class="filter-btn" data-filter="operations">Opérations</button>
-                <button class="filter-btn" data-filter="communication">Communication</button>
+            <!-- MEMBRES INLINE (affiché au clic) -->
+            <div class="dept-members-panel" id="dept-members-panel" style="display:none;">
+                <div class="dept-members-header">
+                    <span id="dept-members-title"></span>
+                    <button onclick="closeDept()" class="dept-close-btn">&times;</button>
+                </div>
+                <div class="members-grid" id="dept-members-grid"></div>
             </div>
-            <div class="members-grid">
-                <!-- STRUCTURE -->
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>Driouche Ayoub</h3><p class="member-role">Chef Structure</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>Otmani Mohamed</h3><p class="member-role">Châssis & Ergonomie</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>Nasri Monir</h3><p class="member-role">Châssis & CFD</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>Hamour Aimen Hocine</h3><p class="member-role">Dynamique — Suspension & Direction</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>Guermah Mahdi</h3><p class="member-role">Conception</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>TETBIRT Chakib</h3><p class="member-role">Étude Géométrie</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>BOUAFIA Kaouthar</h3><p class="member-role">Simulation</p><span class="member-dept">Structure</span></div>
-                <!-- AERO -->
-                <div class="member-card" data-department="aero"><img class="member-photo" src="casque.png" alt="Member"><h3>Benaïda Haïthem</h3><p class="member-role">Chef Aérodynamique</p><span class="member-dept">Aérodynamique</span></div>
-                <div class="member-card" data-department="aero"><img class="member-photo" src="casque.png" alt="Member"><h3>Aoun Ayoub</h3><p class="member-role">Matériaux & Fabrication Composite</p><span class="member-dept">Aérodynamique</span></div>
-                <!-- POWERTRAIN -->
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>Abdallah Azem Chettibi</h3><p class="member-role">Chef Motopropulseur</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>Reziouak Moad</h3><p class="member-role">Système carburant</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>ZAIR Ines</h3><p class="member-role">Système refroidissement</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>DAKHOUCHE Allawa</h3><p class="member-role">Freinage — Règles & Dimensionnement</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>SEBAA Zahreddine</h3><p class="member-role">Système de freinage</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>GHERZI Akrem</h3><p class="member-role">Système échappement</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>TOUHAMI Moulay</h3><p class="member-role">Système admission</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>SADOU Youcef</h3><p class="member-role">Transmission — Différentiel, Chaîne</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>HOCINE Yassmine</h3><p class="member-role">Transmission — Boîte & Embrayage</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>BENGOUMIDA Youcef</h3><p class="member-role">Transmission & Ergonomie</p><span class="member-dept">Motopropulseur</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>Boulebghal Youcef</h3><p class="member-role">Responsable Fabrication</p><span class="member-dept">Motopropulseur</span></div>
-                <!-- CONTROL -->
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>KHIAL Ibrahim</h3><p class="member-role">Chef Contrôle & Électronique</p><span class="member-dept">Contrôle & Élec</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>KERMOUCHE Yasmine</h3><p class="member-role">Chef Câblage</p><span class="member-dept">Contrôle & Élec</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>NAIT SAIDI Mohamed Akram</h3><p class="member-role">Co-Chef Câblage</p><span class="member-dept">Contrôle & Élec</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>GHEMARI Youssra</h3><p class="member-role">Chef Schémas & Logiciel</p><span class="member-dept">Contrôle & Élec</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>HADDADOU Meriem Yasmine</h3><p class="member-role">Co-Chef Schémas & Logiciel</p><span class="member-dept">Contrôle & Élec</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>ZAOUADI Yassine</h3><p class="member-role">Chef Actionneurs & Sous-systèmes</p><span class="member-dept">Contrôle & Élec</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>GRINE Nardjes</h3><p class="member-role">Chef Capteurs & Acquisition données</p><span class="member-dept">Contrôle & Élec</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>GAOUAOUI Karim</h3><p class="member-role">Chef ECU & Systèmes de contrôle</p><span class="member-dept">Contrôle & Élec</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>ELBACHIR Zoulikha Farah</h3><p class="member-role">Co-Chef ECU & Rapport Technique</p><span class="member-dept">Contrôle & Élec</span></div>
-                <!-- OPERATIONS -->
-                <div class="member-card" data-department="operations"><img class="member-photo" src="casque.png" alt="Member"><h3>Baouchi Hammouda</h3><p class="member-role">Chef Partenariats, Opérations & Finances</p><span class="member-dept">Opérations</span></div>
-                <div class="member-card" data-department="operations"><img class="member-photo" src="casque.png" alt="Member"><h3>Zitoune Ahmed Yassine</h3><p class="member-role">Sponsoring & Coordination</p><span class="member-dept">Opérations</span></div>
-                <div class="member-card" data-department="operations"><img class="member-photo" src="casque.png" alt="Member"><h3>DJOUADI Asma</h3><p class="member-role">Documentation, Sponsoring & Trésorerie</p><span class="member-dept">Opérations</span></div>
-                <div class="member-card" data-department="operations"><img class="member-photo" src="casque.png" alt="Member"><h3>Sadouni Yanis</h3><p class="member-role">Sponsoring Externe & Sous-traitance</p><span class="member-dept">Opérations</span></div>
-                <div class="member-card" data-department="operations"><img class="member-photo" src="casque.png" alt="Member"><h3>Lamis Hachemi</h3><p class="member-role">Relations Extérieures & Mobilité Internationale</p><span class="member-dept">Opérations</span></div>
-                <!-- COMMUNICATION -->
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>Meguellati Moncef Abdeldjalil</h3><p class="member-role">Resp. Communication & Relations Extérieures</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>Belkacem Gacem</h3><p class="member-role">Design & Coordination Sponsoring-Communication</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>Ben Kemmoum Meriem</h3><p class="member-role">Contenu Technique & Coordination Sponsor-Équipe</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>Djemaa Raihana Hala</h3><p class="member-role">Contenu Technique & Média</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>Hammadi Nesrine</h3><p class="member-role">Contenu Technique & Média</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>Mohamed Anis Bessaih</h3><p class="member-role">Relations Sponsor-Équipe</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>Moulay Touhemi</h3><p class="member-role">Resp. Production Multimédia</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>Oudalii Abd El Madjid</h3><p class="member-role">Contenu Technique & Média</p><span class="member-dept">Communication</span></div>
-            </div>
+
         </div>
     </section>
 
@@ -1097,6 +1117,125 @@
             const isVisible = grid.classList.contains('visible');
             grid.classList.toggle('visible');
             btn.textContent = isVisible ? 'See More Partners' : 'See Less Partners';
+        }
+
+        // ── DÉPARTEMENT MEMBRES INLINE ──
+        const deptData = {
+            structure: {
+                title: 'Structure',
+                members: [
+                    { name: 'Driouche Ayoub', role: 'Chef Structure', lead: true },
+                    { name: 'Otmani Mohamed', role: 'Châssis & Ergonomie' },
+                    { name: 'Nasri Monir', role: 'Châssis & CFD' },
+                    { name: 'Hamour Aimen Hocine', role: 'Dynamique — Suspension & Direction' },
+                    { name: 'Guermah Mahdi', role: 'Conception' },
+                    { name: 'TETBIRT Chakib', role: 'Étude Géométrie' },
+                    { name: 'BOUAFIA Kaouthar', role: 'Simulation' }
+                ]
+            },
+            aero: {
+                title: 'Aérodynamique',
+                members: [
+                    { name: 'Benaïda Haïthem Abd Allah', role: 'Chef Aérodynamique', lead: true },
+                    { name: 'Aoun Ayoub', role: 'Matériaux & Fabrication Composite' }
+                ]
+            },
+            powertrain: {
+                title: 'Groupe Motopropulseur',
+                members: [
+                    { name: 'Abdallah Azem Chettibi', role: 'Chef Motopropulseur', lead: true },
+                    { name: 'Reziouak Moad', role: 'Système carburant' },
+                    { name: 'ZAIR Ines', role: 'Système refroidissement' },
+                    { name: 'DAKHOUCHE Allawa', role: 'Freinage — Règles & Dimensionnement' },
+                    { name: 'SEBAA Zahreddine', role: 'Système de freinage' },
+                    { name: 'GHERZI Akrem', role: 'Système échappement' },
+                    { name: 'TOUHAMI Moulay', role: 'Système admission' },
+                    { name: 'SADOU Youcef', role: 'Transmission — Différentiel, Chaîne, Arbres' },
+                    { name: 'HOCINE Yassmine', role: 'Transmission — Boîte & Embrayage' },
+                    { name: 'BENGOUMIDA Youcef', role: 'Transmission & Ergonomie' },
+                    { name: 'Boulebghal Youcef', role: 'Responsable Fabrication' }
+                ]
+            },
+            control: {
+                title: 'Contrôle & Électronique',
+                members: [
+                    { name: 'KHIAL Ibrahim', role: 'Chef Contrôle & Électronique', lead: true },
+                    { name: 'KERMOUCHE Yasmine', role: 'Chef Câblage' },
+                    { name: 'NAIT SAIDI Mohamed Akram', role: 'Co-Chef Câblage' },
+                    { name: 'GHEMARI Youssra', role: 'Chef Schémas & Logiciel' },
+                    { name: 'HADDADOU Meriem Yasmine', role: 'Co-Chef Schémas & Logiciel' },
+                    { name: 'ZAOUADI Yassine', role: 'Chef Actionneurs & Sous-systèmes' },
+                    { name: 'GRINE Nardjes', role: 'Chef Capteurs & Acquisition données' },
+                    { name: 'GAOUAOUI Karim', role: 'Chef ECU & Systèmes de contrôle' },
+                    { name: 'ELBACHIR Zoulikha Farah', role: 'Co-Chef ECU & Rapport Technique' }
+                ]
+            },
+            operations: {
+                title: 'Opérations — Partenariats & Finances',
+                members: [
+                    { name: 'Baouchi Hammouda', role: 'Chef Partenariats, Opérations & Finances', lead: true },
+                    { name: 'Zitoune Ahmed Yassine', role: 'Sponsoring & Coordination' },
+                    { name: 'DJOUADI Asma', role: 'Documentation, Sponsoring & Trésorerie' },
+                    { name: 'Sadouni Yanis', role: 'Sponsoring Externe & Sous-traitance' },
+                    { name: 'Lamis Hachemi', role: 'Relations Extérieures & Mobilité Internationale' }
+                ]
+            },
+            communication: {
+                title: 'Communication & Médias',
+                members: [
+                    { name: 'Meguellati Moncef Abdeldjalil', role: 'Resp. Communication & Relations Extérieures', lead: true },
+                    { name: 'Belkacem Gacem', role: 'Design & Coordination Sponsoring-Communication' },
+                    { name: 'Ben Kemmoum Meriem', role: 'Contenu Technique & Coordination Sponsor-Équipe' },
+                    { name: 'Djemaa Raihana Hala', role: 'Contenu Technique & Média' },
+                    { name: 'Hammadi Nesrine', role: 'Contenu Technique & Média' },
+                    { name: 'Mohamed Anis Bessaih', role: 'Relations Sponsor-Équipe' },
+                    { name: 'Moulay Touhemi', role: 'Resp. Production Multimédia' },
+                    { name: 'Oudalii Abd El Madjid', role: 'Contenu Technique & Média' }
+                ]
+            }
+        };
+
+        let currentDept = null;
+
+        function toggleDept(dept, el) {
+            const panel = document.getElementById('dept-members-panel');
+            const grid  = document.getElementById('dept-members-grid');
+            const title = document.getElementById('dept-members-title');
+
+            // Désactiver toutes les cartes
+            document.querySelectorAll('.org-dept').forEach(c => c.classList.remove('active'));
+
+            // Si même dept → fermer
+            if (currentDept === dept) {
+                panel.style.display = 'none';
+                currentDept = null;
+                return;
+            }
+
+            // Activer la carte cliquée
+            el.classList.add('active');
+            currentDept = dept;
+
+            const data = deptData[dept];
+            title.textContent = data.title;
+
+            grid.innerHTML = data.members.map(m => `
+                <div class="member-card">
+                    <img class="member-photo" src="casque.png" alt="${m.name}">
+                    <h3>${m.name}</h3>
+                    <p class="member-role">${m.role}</p>
+                    ${m.lead ? '<span class="member-dept" style="background:#c0a020">Lead</span>' : ''}
+                </div>
+            `).join('');
+
+            panel.style.display = 'block';
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function closeDept() {
+            document.getElementById('dept-members-panel').style.display = 'none';
+            document.querySelectorAll('.org-dept').forEach(c => c.classList.remove('active'));
+            currentDept = null;
         }
     </script>
     <script src="kill.js"></script>
