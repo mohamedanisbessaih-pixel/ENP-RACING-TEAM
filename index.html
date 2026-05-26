@@ -129,8 +129,10 @@
             letter-spacing: 1px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
+        .pack-v3 .pack-badge { background: #c0a020; color: #000; }
         .pack-v2 .pack-badge { background: #e63946; }
         .pack-v1 .pack-badge { background: #f4a261; }
+
         .partner-name {
             font-size: 0.7rem;
             font-weight: 600;
@@ -151,6 +153,8 @@
             border: 1px solid rgba(255,255,255,0.07);
         }
         .all-partners-grid.visible { display: flex; }
+
+        /* ── TAILLES CARTES PAR PACK ── */
         .all-partner-card {
             position: relative;
             background: rgba(255,255,255,0.07);
@@ -161,8 +165,6 @@
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
-            width: 160px;
-            height: 100px;
             padding: 1rem;
             box-shadow: 0 2px 12px rgba(0,0,0,0.18);
             transition: transform 0.25s, box-shadow 0.25s;
@@ -172,7 +174,24 @@
             transform: translateY(-6px);
             box-shadow: 0 8px 24px rgba(230,57,70,0.25);
         }
-        .all-partner-card img {
+
+        /* V3 — plus grande */
+        .all-partner-card.pack-v3 {
+            width: 200px;
+            height: 130px;
+        }
+        .all-partner-card.pack-v3 img {
+            max-width: 145px;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        /* V2 — moyenne */
+        .all-partner-card.pack-v2 {
+            width: 160px;
+            height: 100px;
+        }
+        .all-partner-card.pack-v2 img {
             max-width: 110px;
             max-height: 55px;
             object-fit: contain;
@@ -180,6 +199,21 @@
             border-radius: 6px;
             padding: 6px;
         }
+
+        /* V1 — plus petite */
+        .all-partner-card.pack-v1 {
+            width: 125px;
+            height: 80px;
+        }
+        .all-partner-card.pack-v1 img {
+            max-width: 85px;
+            max-height: 42px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 4px;
+            padding: 4px;
+        }
+
         .all-partner-card span {
             color: #fff;
             font-weight: 600;
@@ -467,28 +501,77 @@
             <h2 data-translate="partners_title">Our Partners</h2>
             <p class="subtitle" data-translate="partners_subtitle">Companies supporting our journey</p>
 
+            <!-- CAROUSEL -->
             <div class="partners-carousel-wrapper">
                 <div class="partners-carousel-track" id="partnersCarouselTrack">
-                    <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
-                    <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
-                    <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
-                    <div class="carousel-partner-card"><img src="logotoyota.png" alt="Toyota"></div>
-                    <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
-                    <div class="carousel-partner-card"><img src="logofluidex.png" alt="Fluidex"></div>
-                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
-                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technocast"></div>
-                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
+                    <!-- Série 1 -->
                     <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
                     <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
-                    <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
-                    <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
-                    <div class="carousel-partner-card"><img src="logotoyota.png" alt="Toyota"></div>
-                    <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
-                    <div class="carousel-partner-card"><img src="logofluidex.png" alt="Fluidex"></div>
+                    <div class="carousel-partner-card"><img src="logomondialindustries.png" alt="Mondial Industries"></div>
+                    <div class="carousel-partner-card"><img src="logocosider.png" alt="Cosider"></div>
+                    <div class="carousel-partner-card"><img src="logoipg.png" alt="JPG Car Maker"></div>
+                    <div class="carousel-partner-card"><img src="logodassault.png" alt="Dassault Systèmes"></div>
+                    <div class="carousel-partner-card"><img src="logoansys.png" alt="Ansys"></div>
+                    <div class="carousel-partner-card"><img src="logorapidharness.png" alt="Rapidharness"></div>
+                    <div class="carousel-partner-card"><img src="logomathworks.png" alt="MathWorks"></div>
                     <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
-                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technocast"></div>
+                    <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
+                    <div class="carousel-partner-card"><img src="logорhodius.png" alt="Rhodius"></div>
+                    <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
+                    <div class="carousel-partner-card"><img src="logoenp.jpg" alt="ENP"></div>
+                    <div class="carousel-partner-card"><img src="logocrti.png" alt="CRTI"></div>
+                    <div class="carousel-partner-card"><img src="logomotor9.png" alt="MOTOR 9"></div>
+                    <div class="carousel-partner-card"><img src="logosanp.png" alt="SANP"></div>
+                    <div class="carousel-partner-card"><img src="logopromosalon.png" alt="Promo Salon"></div>
+                    <div class="carousel-partner-card"><img src="logoformulastudentuk.png" alt="Formula Student UK"></div>
+                    <div class="carousel-partner-card"><img src="logopac.png" alt="PAC"></div>
+                    <div class="carousel-partner-card"><img src="logoelmaerifa.png" alt="Association El Maerifa"></div>
+                    <div class="carousel-partner-card"><img src="logosimscale.png" alt="SimScale"></div>
+                    <div class="carousel-partner-card"><img src="logooxy.png" alt="Oxy"></div>
+                    <div class="carousel-partner-card"><img src="logomaghrebtruck.png" alt="Maghreb Truck Company"></div>
                     <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
+                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technomotive"></div>
+                    <div class="carousel-partner-card"><img src="logoidenet.png" alt="Ide Net"></div>
+                    <div class="carousel-partner-card"><img src="logofluidex.png" alt="Fluidex"></div>
+                    <div class="carousel-partner-card"><img src="logotoyota.png" alt="Toyota"></div>
+                    <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
+                    <div class="carousel-partner-card"><img src="logoabprecision.png" alt="AB Precision"></div>
+                    <div class="carousel-partner-card"><img src="logoeuroprotection.png" alt="Euro Protection Algérie"></div>
+                    <div class="carousel-partner-card"><img src="logoalmitech.png" alt="Almitech"></div>
+                    <!-- Série 2 — copie pour boucle infinie -->
                     <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
+                    <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
+                    <div class="carousel-partner-card"><img src="logomondialindustries.png" alt="Mondial Industries"></div>
+                    <div class="carousel-partner-card"><img src="logocosider.png" alt="Cosider"></div>
+                    <div class="carousel-partner-card"><img src="logoipg.png" alt="JPG Car Maker"></div>
+                    <div class="carousel-partner-card"><img src="logodassault.png" alt="Dassault Systèmes"></div>
+                    <div class="carousel-partner-card"><img src="logoansys.png" alt="Ansys"></div>
+                    <div class="carousel-partner-card"><img src="logorapidharness.png" alt="Rapidharness"></div>
+                    <div class="carousel-partner-card"><img src="logomathworks.png" alt="MathWorks"></div>
+                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
+                    <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
+                    <div class="carousel-partner-card"><img src="logорhodius.png" alt="Rhodius"></div>
+                    <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
+                    <div class="carousel-partner-card"><img src="logoenp.jpg" alt="ENP"></div>
+                    <div class="carousel-partner-card"><img src="logocrti.png" alt="CRTI"></div>
+                    <div class="carousel-partner-card"><img src="logomotor9.png" alt="MOTOR 9"></div>
+                    <div class="carousel-partner-card"><img src="logosanp.png" alt="SANP"></div>
+                    <div class="carousel-partner-card"><img src="logopromosalon.png" alt="Promo Salon"></div>
+                    <div class="carousel-partner-card"><img src="logoformulastudentuk.png" alt="Formula Student UK"></div>
+                    <div class="carousel-partner-card"><img src="logopac.png" alt="PAC"></div>
+                    <div class="carousel-partner-card"><img src="logoelmaerifa.png" alt="Association El Maerifa"></div>
+                    <div class="carousel-partner-card"><img src="logosimscale.png" alt="SimScale"></div>
+                    <div class="carousel-partner-card"><img src="logooxy.png" alt="Oxy"></div>
+                    <div class="carousel-partner-card"><img src="logomaghrebtruck.png" alt="Maghreb Truck Company"></div>
+                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
+                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technomotive"></div>
+                    <div class="carousel-partner-card"><img src="logoidenet.png" alt="Ide Net"></div>
+                    <div class="carousel-partner-card"><img src="logofluidex.png" alt="Fluidex"></div>
+                    <div class="carousel-partner-card"><img src="logotoyota.png" alt="Toyota"></div>
+                    <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
+                    <div class="carousel-partner-card"><img src="logoabprecision.png" alt="AB Precision"></div>
+                    <div class="carousel-partner-card"><img src="logoeuroprotection.png" alt="Euro Protection Algérie"></div>
+                    <div class="carousel-partner-card"><img src="logoalmitech.png" alt="Almitech"></div>
                 </div>
             </div>
 
@@ -496,42 +579,77 @@
                 See More Partners
             </button>
 
+            <!-- GRILLE COMPLÈTE -->
             <div class="all-partners-grid" id="allPartnersGrid">
-                <div class="partners-category-title">Pack V2</div>
+
+                <!-- PACK V3 -->
+                <div class="partners-category-title">Pack V3</div>
                 <div class="partners-category-grid">
-                    <div class="all-partner-card pack-v2">
-                        <div class="pack-badge">V2</div>
+                    <div class="all-partner-card pack-v3">
+                        <div class="pack-badge">V3</div>
+                        <img src="logobaouchi.png" alt="Trans Baouchi">
+                        <span class="partner-name">Trans Baouchi</span>
+                    </div>
+                    <div class="all-partner-card pack-v3">
+                        <div class="pack-badge">V3</div>
                         <img src="logovms.jpeg" alt="VMS">
                         <span class="partner-name">VMS</span>
                     </div>
-                    <div class="all-partner-card pack-v2">
-                        <div class="pack-badge">V2</div>
-                        <img src="logopurepox.jpeg" alt="Purepox">
-                        <span class="partner-name">Purepox</span>
+                    <div class="all-partner-card pack-v3">
+                        <div class="pack-badge">V3</div>
+                        <img src="logomondialindustries.png" alt="Mondial Industries">
+                        <span class="partner-name">Mondial Industries</span>
+                    </div>
+                    <div class="all-partner-card pack-v3">
+                        <div class="pack-badge">V3</div>
+                        <img src="logocosider.png" alt="Cosider">
+                        <span class="partner-name">Cosider</span>
                     </div>
                 </div>
 
-                <div class="partners-category-title">Pack V1</div>
+                <!-- PACK V2 -->
+                <div class="partners-category-title">Pack V2</div>
                 <div class="partners-category-grid">
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoHKINDUSTRIE.png" alt="HK Industrie"><span class="partner-name">HK Industrie</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotoyota.png" alt="Toyota"><span class="partner-name">Toyota</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoslb.png" alt="SLB"><span class="partner-name">SLB</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logofluidex.png" alt="Fluidex"><span class="partner-name">Fluidex</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logomerbahindustrie.png" alt="Merbah Industrie"><span class="partner-name">Merbah Industrie</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotechnomotiv.jpeg" alt="Technocast"><span class="partner-name">Technocast</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoBkFire.png" alt="BK Fire"><span class="partner-name">BK Fire</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logobaouchi.png" alt="Trans Baouchi"><span class="partner-name">Trans Baouchi</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoipg.png" alt="JPG Car Maker"><span class="partner-name">JPG Car Maker</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logodassault.png" alt="Dassault Systèmes"><span class="partner-name">Dassault Systèmes</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoansys.png" alt="Ansys"><span class="partner-name">Ansys</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logorapidharness.png" alt="Rapidharness"><span class="partner-name">Rapidharness</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logomathworks.png" alt="MathWorks"><span class="partner-name">MathWorks</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logomerbahindustrie.png" alt="Merbah Industrie"><span class="partner-name">Merbah Industrie</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoslb.png" alt="SLB"><span class="partner-name">SLB</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logорhodius.png" alt="Rhodius"><span class="partner-name">Rhodius</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logopurepox.jpeg" alt="Purepox"><span class="partner-name">Purepox</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><span>Fab Lab</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoenp.jpg" alt="ENP"><span class="partner-name">ENP</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logocrti.png" alt="CRTI"><span class="partner-name">CRTI</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logomotor9.png" alt="MOTOR 9"><span class="partner-name">MOTOR 9</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logosanp.png" alt="SANP"><span class="partner-name">SANP</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logopromosalon.png" alt="Promo Salon"><span class="partner-name">Promo Salon</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoformulastudentuk.png" alt="Formula Student UK"><span class="partner-name">Formula Student UK</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logopac.png" alt="PAC"><span class="partner-name">PAC</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoelmaerifa.png" alt="Association El Maerifa"><span class="partner-name">Association El Maerifa</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><span>Bittam / SARL Qannaq</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logosimscale.png" alt="SimScale"><span class="partner-name">SimScale</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logooxy.png" alt="Oxy"><span class="partner-name">Oxy</span></div>
+                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logomaghrebtruck.png" alt="Maghreb Truck Company"><span class="partner-name">Maghreb Truck Company</span></div>
                 </div>
 
-                <div class="partners-category-title">Other Sponsors</div>
+                <!-- PACK V1 -->
+                <div class="partners-category-title">Pack V1</div>
                 <div class="partners-category-grid">
-                    <div class="all-partner-card pack-other"><img src="logoipg.png" alt="IPG Car Maker"><span class="partner-name">IPG Car Maker</span></div>
-                    <div class="all-partner-card pack-other"><img src="logodassault.png" alt="Dassault Systèmes"><span class="partner-name">Dassault Systèmes</span></div>
-                    <div class="all-partner-card pack-other"><img src="logoansys.png" alt="Ansys"><span class="partner-name">Ansys</span></div>
-                    <div class="all-partner-card pack-other"><img src="logorapidharness.png" alt="Rapidharness"><span class="partner-name">Rapidharness</span></div>
-                    <div class="all-partner-card pack-other"><img src="logomathworks.png" alt="Mathworks"><span class="partner-name">Mathworks</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoBkFire.png" alt="BK Fire"><span class="partner-name">BK Fire</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotechnomotiv.jpeg" alt="Technomotive"><span class="partner-name">Technomotive</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoidenet.png" alt="Ide Net"><span class="partner-name">Ide Net</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logofluidex.png" alt="Fluidex"><span class="partner-name">Fluidex</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotoyota.png" alt="Toyota"><span class="partner-name">Toyota</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoHKINDUSTRIE.png" alt="HK Industrie"><span class="partner-name">HK Industrie</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoabprecision.png" alt="AB Precision"><span class="partner-name">AB Precision</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><span>Pima</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoeuroprotection.png" alt="Euro Protection Algérie"><span class="partner-name">Euro Protection Algérie</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoalmitech.png" alt="Almitech"><span class="partner-name">Almitech</span></div>
                 </div>
-            </div>
+
+            </div><!-- fin all-partners-grid -->
 
             <div class="partner-cta">
                 <h3 data-translate="partners_cta_title">Become a Partner</h3>
@@ -540,6 +658,7 @@
                     Contact Us
                 </button>
             </div>
+
         </div>
     </section>
 
