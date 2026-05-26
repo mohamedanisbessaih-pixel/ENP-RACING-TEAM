@@ -177,29 +177,49 @@
 
         /* V3 — plus grande */
         .all-partner-card.pack-v3 {
-    width: 260px;
-    height: 170px;
-}
-.all-partner-card.pack-v3 img {
-    max-width: 200px;
-    max-height: 110px;
-}
-.all-partner-card.pack-v2 {
-    width: 175px;
-    height: 115px;
-}
-.all-partner-card.pack-v2 img {
-    max-width: 130px;
-    max-height: 65px;
-}
-.all-partner-card.pack-v1 {
-    width: 125px;
-    height: 80px;
-}
-.all-partner-card.pack-v1 img {
-    max-width: 85px;
-    max-height: 42px;
-}
+            width: 200px;
+            height: 130px;
+        }
+        .all-partner-card.pack-v3 img {
+            max-width: 145px;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        /* V2 — moyenne */
+        .all-partner-card.pack-v2 {
+            width: 160px;
+            height: 100px;
+        }
+        .all-partner-card.pack-v2 img {
+            max-width: 110px;
+            max-height: 55px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 6px;
+            padding: 6px;
+        }
+
+        /* V1 — plus petite */
+        .all-partner-card.pack-v1 {
+            width: 125px;
+            height: 80px;
+        }
+        .all-partner-card.pack-v1 img {
+            max-width: 85px;
+            max-height: 42px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 4px;
+            padding: 4px;
+        }
+
+        .all-partner-card span {
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.82rem;
+            text-align: center;
+        }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -496,7 +516,7 @@
                     <div class="carousel-partner-card"><img src="logomathworks.png" alt="MathWorks"></div>
                     <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
                     <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
-                    <div class="carousel-partner-card"><img src="logorhodius.png" alt="Rhodius"></div>
+                    <div class="carousel-partner-card"><img src="logорhodius.png" alt="Rhodius"></div>
                     <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
                     <div class="carousel-partner-card"><img src="logoenp.jpg" alt="ENP"></div>
                     <div class="carousel-partner-card"><img src="logocrti.png" alt="CRTI"></div>
@@ -530,7 +550,7 @@
                     <div class="carousel-partner-card"><img src="logomathworks.png" alt="MathWorks"></div>
                     <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
                     <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
-                    <div class="carousel-partner-card"><img src="logorhodius.png" alt="Rhodius"></div>
+                    <div class="carousel-partner-card"><img src="logорhodius.png" alt="Rhodius"></div>
                     <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
                     <div class="carousel-partner-card"><img src="logoenp.jpg" alt="ENP"></div>
                     <div class="carousel-partner-card"><img src="logocrti.png" alt="CRTI"></div>
@@ -648,19 +668,15 @@
             <h2 data-translate="media_title">Media</h2>
             <div class="media-filters">
                 <button class="filter-btn active" data-filter="all" data-translate="filter_all">All</button>
-                <button class="filter-btn" data-filter="workshop" data-translate="filter_workshop">Workshop</button>
                 <button class="filter-btn" data-filter="manufacturing" data-translate="filter_manufacturing">Manufacturing</button>
                 <button class="filter-btn" data-filter="events" data-translate="filter_events">Events</button>
             </div>
             <div class="media-gallery" id="mediaGallery">
-                <img src="placeholder.jpg" data-src="real-image-1.jpg" class="media-item lazy" data-category="workshop" alt="Workshop" onclick="openLightbox(0)">
-                <img src="placeholder.jpg" data-src="real-image-2.jpg" class="media-item lazy" data-category="manufacturing" alt="Manufacturing" onclick="openLightbox(1)">
-                <img src="placeholder.jpg" data-src="real-image-3.jpg" class="media-item lazy" data-category="events" alt="Event" onclick="openLightbox(2)">
-                <img src="placeholder.jpg" data-src="real-image-4.jpg" class="media-item lazy" data-category="workshop" alt="Workshop" onclick="openLightbox(3)">
-                <img src="placeholder.jpg" data-src="real-image-5.jpg" class="media-item lazy" data-category="manufacturing" alt="Manufacturing" onclick="openLightbox(4)">
-                <img src="placeholder.jpg" data-src="real-image-6.jpg" class="media-item lazy" data-category="events" alt="Event" onclick="openLightbox(5)">
-                <img src="event1.png" class="media-item" data-category="events" alt="Minister Visit Event 1" onclick="openLightbox(6)">
-                <img src="event2.png" class="media-item" data-category="events" alt="Minister Visit Event 2" onclick="openLightbox(7)">
+                <img src="manufacturing1.jpg" class="media-item" data-category="manufacturing" alt="Manufacturing 1" onclick="openLightbox(0)">
+                <img src="manufacturing2.png" class="media-item" data-category="manufacturing" alt="Manufacturing 2" onclick="openLightbox(1)">
+                <img src="manufacturing3.png" class="media-item" data-category="manufacturing" alt="Manufacturing 3" onclick="openLightbox(2)">
+                <img src="event1.png" class="media-item" data-category="events" alt="Event 1" onclick="openLightbox(3)">
+                <img src="event2.png" class="media-item" data-category="events" alt="Event 2" onclick="openLightbox(4)">
             </div>
             <div class="press-kit-section">
                 <h3 data-translate="presskit_title">Press Kit</h3>
