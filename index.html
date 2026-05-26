@@ -129,10 +129,8 @@
             letter-spacing: 1px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
-        .pack-v3 .pack-badge { background: #c0a020; color: #000; }
         .pack-v2 .pack-badge { background: #e63946; }
         .pack-v1 .pack-badge { background: #f4a261; }
-
         .partner-name {
             font-size: 0.7rem;
             font-weight: 600;
@@ -153,8 +151,6 @@
             border: 1px solid rgba(255,255,255,0.07);
         }
         .all-partners-grid.visible { display: flex; }
-
-        /* ── TAILLES CARTES PAR PACK ── */
         .all-partner-card {
             position: relative;
             background: rgba(255,255,255,0.07);
@@ -165,6 +161,8 @@
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
+            width: 160px;
+            height: 100px;
             padding: 1rem;
             box-shadow: 0 2px 12px rgba(0,0,0,0.18);
             transition: transform 0.25s, box-shadow 0.25s;
@@ -174,24 +172,7 @@
             transform: translateY(-6px);
             box-shadow: 0 8px 24px rgba(230,57,70,0.25);
         }
-
-        /* V3 — plus grande */
-        .all-partner-card.pack-v3 {
-            width: 200px;
-            height: 130px;
-        }
-        .all-partner-card.pack-v3 img {
-            max-width: 145px;
-            max-height: 80px;
-            object-fit: contain;
-        }
-
-        /* V2 — moyenne */
-        .all-partner-card.pack-v2 {
-            width: 160px;
-            height: 100px;
-        }
-        .all-partner-card.pack-v2 img {
+        .all-partner-card img {
             max-width: 110px;
             max-height: 55px;
             object-fit: contain;
@@ -199,21 +180,6 @@
             border-radius: 6px;
             padding: 6px;
         }
-
-        /* V1 — plus petite */
-        .all-partner-card.pack-v1 {
-            width: 125px;
-            height: 80px;
-        }
-        .all-partner-card.pack-v1 img {
-            max-width: 85px;
-            max-height: 42px;
-            object-fit: contain;
-            background: #fff;
-            border-radius: 4px;
-            padding: 4px;
-        }
-
         .all-partner-card span {
             color: #fff;
             font-weight: 600;
@@ -414,46 +380,46 @@
                 <button class="filter-btn" data-filter="communication" data-translate="dept_communication">Communication</button>
             </div>
             <div class="members-grid">
-                <div class="member-card" data-department="management"><img class="member-photo" src="casque.png" alt="Member"><h3>MENZER Ilyes</h3><p class="member-role">Project Manager</p><span class="member-dept">Management</span></div>
-                <div class="member-card" data-department="management"><img class="member-photo" src="casque.png" alt="Member"><h3>KADA Besma</h3><p class="member-role">Team Manager</p><span class="member-dept">Management</span></div>
-                <div class="member-card" data-department="management"><img class="member-photo" src="casque.png" alt="Member"><h3>CHOUMANE Anefal</h3><p class="member-role">Chief Engineer</p><span class="member-dept">Management</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>DRIOUCHE Ayoub</h3><p class="member-role">CAD</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>BOUAFIA Kawthar</h3><p class="member-role">CAD-quiz</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>HAMMOUR Aymen</h3><p class="member-role">Geometry-upright</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>GUERMAH Mahdi</h3><p class="member-role">Geometry-sim</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>OTMANI Mohamed</h3><p class="member-role">CAD-sim</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>REZIOUK Moad</h3><p class="member-role">Geometry</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>BOULEBGHAL Youcef</h3><p class="member-role">CAD</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="structure"><img class="member-photo" src="casque.png" alt="Member"><h3>TETBIRAT Chakib</h3><p class="member-role">Structure Engineer</p><span class="member-dept">Structure</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>SEBAA Zahreddine</h3><p class="member-role">Braking System</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>BEKRAR Islem</h3><p class="member-role">Ergonomie</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>CHERZI Akrem</h3><p class="member-role">Engine</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>ZAIR Ines</h3><p class="member-role">Cooling System</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>BENGOUMIDA Youcef</h3><p class="member-role">Mountings</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>HOCINE Yasmine</h3><p class="member-role">Clutch System</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>DEKHOUCHE Allawa</h3><p class="member-role">Lubrification System</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>SADOU Youcef</h3><p class="member-role">Différentiel</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="powertrain"><img class="member-photo" src="casque.png" alt="Member"><h3>CHTTIBI Azem</h3><p class="member-role">Powertrain Engineer</p><span class="member-dept">Powertrain</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>ZAOUADI Yacine</h3><p class="member-role">Actuators Specialist</p><span class="member-dept">Control</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>GHEMARI Yousra</h3><p class="member-role">Head of Documentation</p><span class="member-dept">Control</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>KERMOUCHE Aya</h3><p class="member-role">Schematics Lead Engineer</p><span class="member-dept">Control</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>NAIT SAIDI Akrem</h3><p class="member-role">Wiring Lead Engineer</p><span class="member-dept">Control</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>KHIAL Ibrahim</h3><p class="member-role">Wiring Co-Lead Engineer</p><span class="member-dept">Control</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>GAOUAOUI Karim</h3><p class="member-role">ECU & Control Systems Specialist</p><span class="member-dept">Control</span></div>
-                <div class="member-card" data-department="control"><img class="member-photo" src="casque.png" alt="Member"><h3>GRINE Nardjes</h3><p class="member-role">Sensors Specialist</p><span class="member-dept">Control</span></div>
-                <div class="member-card" data-department="aero"><img class="member-photo" src="casque.png" alt="Member"><h3>BENAIDA Haithem</h3><p class="member-role">CFD Responsible</p><span class="member-dept">Aerodynamics</span></div>
-                <div class="member-card" data-department="aero"><img class="member-photo" src="casque.png" alt="Member"><h3>NASRI Yacine</h3><p class="member-role">Composites & Fabrication</p><span class="member-dept">Aerodynamics</span></div>
-                <div class="member-card" data-department="aero"><img class="member-photo" src="casque.png" alt="Member"><h3>AOUN Ayoub</h3><p class="member-role">CAD</p><span class="member-dept">Aerodynamics</span></div>
-                <div class="member-card" data-department="aero"><img class="member-photo" src="casque.png" alt="Member"><h3>TOUHAMI Moulay</h3><p class="member-role">Aero Engineer</p><span class="member-dept">Aerodynamics</span></div>
-                <div class="member-card" data-department="operations"><img class="member-photo" src="casque.png" alt="Member"><h3>BAOUCHI Hammouda</h3><p class="member-role">Achat & Logistics</p><span class="member-dept">Operations</span></div>
-                <div class="member-card" data-department="operations"><img class="member-photo" src="casque.png" alt="Member"><h3>DJOUADI Asma</h3><p class="member-role">Sous-traitance & Coordination</p><span class="member-dept">Operations</span></div>
-                <div class="member-card" data-department="operations"><img class="member-photo" src="casque.png" alt="Member"><h3>ZITOUNE Ahmed Yassine</h3><p class="member-role">Achats</p><span class="member-dept">Operations</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>MEGUELLATI Moncef</h3><p class="member-role">Communication Lead</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>HAMMADI Nesrine</h3><p class="member-role">Media Manager</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>BENKEMOUM Meriem</h3><p class="member-role">Communication</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>DJEMAA Hala</h3><p class="member-role">Communication</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>SAADOUNI Yanis</h3><p class="member-role">Communication</p><span class="member-dept">Communication</span></div>
-                <div class="member-card" data-department="communication"><img class="member-photo" src="casque.png" alt="Member"><h3>BESSAIH Anis</h3><p class="member-role">Web Developer</p><span class="member-dept">Communication</span></div>
+                <div class="member-card" data-department="management"><div class="member-photo"></div><h3>MENZER Ilyes</h3><p class="member-role">Project Manager</p><span class="member-dept">Management</span></div>
+                <div class="member-card" data-department="management"><div class="member-photo"></div><h3>KADA Besma</h3><p class="member-role">Team Manager</p><span class="member-dept">Management</span></div>
+                <div class="member-card" data-department="management"><div class="member-photo"></div><h3>CHOUMANE Anefal</h3><p class="member-role">Chief Engineer</p><span class="member-dept">Management</span></div>
+                <div class="member-card" data-department="structure"><div class="member-photo"></div><h3>DRIOUCHE Ayoub</h3><p class="member-role">CAD</p><span class="member-dept">Structure</span></div>
+                <div class="member-card" data-department="structure"><div class="member-photo"></div><h3>BOUAFIA Kawthar</h3><p class="member-role">CAD-quiz</p><span class="member-dept">Structure</span></div>
+                <div class="member-card" data-department="structure"><div class="member-photo"></div><h3>HAMMOUR Aymen</h3><p class="member-role">Geometry-upright</p><span class="member-dept">Structure</span></div>
+                <div class="member-card" data-department="structure"><div class="member-photo"></div><h3>GUERMAH Mahdi</h3><p class="member-role">Geometry-sim</p><span class="member-dept">Structure</span></div>
+                <div class="member-card" data-department="structure"><div class="member-photo"></div><h3>OTMANI Mohamed</h3><p class="member-role">CAD-sim</p><span class="member-dept">Structure</span></div>
+                <div class="member-card" data-department="structure"><div class="member-photo"></div><h3>REZIOUK Moad</h3><p class="member-role">Geometry</p><span class="member-dept">Structure</span></div>
+                <div class="member-card" data-department="structure"><div class="member-photo"></div><h3>BOULEBGHAL Youcef</h3><p class="member-role">CAD</p><span class="member-dept">Structure</span></div>
+                <div class="member-card" data-department="structure"><div class="member-photo"></div><h3>TETBIRAT Chakib</h3><p class="member-role">Structure Engineer</p><span class="member-dept">Structure</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>SEBAA Zahreddine</h3><p class="member-role">Braking System</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>BEKRAR Islem</h3><p class="member-role">Ergonomie</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>CHERZI Akrem</h3><p class="member-role">Engine</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>ZAIR Ines</h3><p class="member-role">Cooling System</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>BENGOUMIDA Youcef</h3><p class="member-role">Mountings</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>HOCINE Yasmine</h3><p class="member-role">Clutch System</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>DEKHOUCHE Allawa</h3><p class="member-role">Lubrification System</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>SADOU Youcef</h3><p class="member-role">Différentiel</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="powertrain"><div class="member-photo"></div><h3>CHTTIBI Azem</h3><p class="member-role">Powertrain Engineer</p><span class="member-dept">Powertrain</span></div>
+                <div class="member-card" data-department="control"><div class="member-photo"></div><h3>ZAOUADI Yacine</h3><p class="member-role">Actuators Specialist</p><span class="member-dept">Control</span></div>
+                <div class="member-card" data-department="control"><div class="member-photo"></div><h3>GHEMARI Yousra</h3><p class="member-role">Head of Documentation</p><span class="member-dept">Control</span></div>
+                <div class="member-card" data-department="control"><div class="member-photo"></div><h3>KERMOUCHE Aya</h3><p class="member-role">Schematics Lead Engineer</p><span class="member-dept">Control</span></div>
+                <div class="member-card" data-department="control"><div class="member-photo"></div><h3>NAIT SAIDI Akrem</h3><p class="member-role">Wiring Lead Engineer</p><span class="member-dept">Control</span></div>
+                <div class="member-card" data-department="control"><div class="member-photo"></div><h3>KHIAL Ibrahim</h3><p class="member-role">Wiring Co-Lead Engineer</p><span class="member-dept">Control</span></div>
+                <div class="member-card" data-department="control"><div class="member-photo"></div><h3>GAOUAOUI Karim</h3><p class="member-role">ECU & Control Systems Specialist</p><span class="member-dept">Control</span></div>
+                <div class="member-card" data-department="control"><div class="member-photo"></div><h3>GRINE Nardjes</h3><p class="member-role">Sensors Specialist</p><span class="member-dept">Control</span></div>
+                <div class="member-card" data-department="aero"><div class="member-photo"></div><h3>BENAIDA Haithem</h3><p class="member-role">CFD Responsible</p><span class="member-dept">Aerodynamics</span></div>
+                <div class="member-card" data-department="aero"><div class="member-photo"></div><h3>NASRI Yacine</h3><p class="member-role">Composites & Fabrication</p><span class="member-dept">Aerodynamics</span></div>
+                <div class="member-card" data-department="aero"><div class="member-photo"></div><h3>AOUN Ayoub</h3><p class="member-role">CAD</p><span class="member-dept">Aerodynamics</span></div>
+                <div class="member-card" data-department="aero"><div class="member-photo"></div><h3>TOUHAMI Moulay</h3><p class="member-role">Aero Engineer</p><span class="member-dept">Aerodynamics</span></div>
+                <div class="member-card" data-department="operations"><div class="member-photo"></div><h3>BAOUCHI Hammouda</h3><p class="member-role">Achat & Logistics</p><span class="member-dept">Operations</span></div>
+                <div class="member-card" data-department="operations"><div class="member-photo"></div><h3>DJOUADI Asma</h3><p class="member-role">Sous-traitance & Coordination</p><span class="member-dept">Operations</span></div>
+                <div class="member-card" data-department="operations"><div class="member-photo"></div><h3>ZITOUNE Ahmed Yassine</h3><p class="member-role">Achats</p><span class="member-dept">Operations</span></div>
+                <div class="member-card" data-department="communication"><div class="member-photo"></div><h3>MEGUELLATI Moncef</h3><p class="member-role">Communication Lead</p><span class="member-dept">Communication</span></div>
+                <div class="member-card" data-department="communication"><div class="member-photo"></div><h3>HAMMADI Nesrine</h3><p class="member-role">Media Manager</p><span class="member-dept">Communication</span></div>
+                <div class="member-card" data-department="communication"><div class="member-photo"></div><h3>BENKEMOUM Meriem</h3><p class="member-role">Communication</p><span class="member-dept">Communication</span></div>
+                <div class="member-card" data-department="communication"><div class="member-photo"></div><h3>DJEMAA Hala</h3><p class="member-role">Communication</p><span class="member-dept">Communication</span></div>
+                <div class="member-card" data-department="communication"><div class="member-photo"></div><h3>SAADOUNI Yanis</h3><p class="member-role">Communication</p><span class="member-dept">Communication</span></div>
+                <div class="member-card" data-department="communication"><div class="member-photo"></div><h3>BESSAIH Anis</h3><p class="member-role">Web Developer</p><span class="member-dept">Communication</span></div>
             </div>
         </div>
     </section>
@@ -501,77 +467,28 @@
             <h2 data-translate="partners_title">Our Partners</h2>
             <p class="subtitle" data-translate="partners_subtitle">Companies supporting our journey</p>
 
-            <!-- CAROUSEL -->
             <div class="partners-carousel-wrapper">
                 <div class="partners-carousel-track" id="partnersCarouselTrack">
-                    <!-- Série 1 -->
+                    <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
+                    <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
+                    <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
+                    <div class="carousel-partner-card"><img src="logotoyota.png" alt="Toyota"></div>
+                    <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
+                    <div class="carousel-partner-card"><img src="logofluidex.png" alt="Fluidex"></div>
+                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
+                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technocast"></div>
+                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
                     <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
                     <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
-                    <div class="carousel-partner-card"><img src="logomondialindustries.png" alt="Mondial Industries"></div>
-                    <div class="carousel-partner-card"><img src="logocosider.png" alt="Cosider"></div>
-                    <div class="carousel-partner-card"><img src="logoipg.png" alt="JPG Car Maker"></div>
-                    <div class="carousel-partner-card"><img src="logodassault.png" alt="Dassault Systèmes"></div>
-                    <div class="carousel-partner-card"><img src="logoansys.png" alt="Ansys"></div>
-                    <div class="carousel-partner-card"><img src="logorapidharness.png" alt="Rapidharness"></div>
-                    <div class="carousel-partner-card"><img src="logomathworks.png" alt="MathWorks"></div>
-                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
-                    <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
-                    <div class="carousel-partner-card"><img src="logорhodius.png" alt="Rhodius"></div>
                     <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
-                    <div class="carousel-partner-card"><img src="logoenp.jpg" alt="ENP"></div>
-                    <div class="carousel-partner-card"><img src="logocrti.png" alt="CRTI"></div>
-                    <div class="carousel-partner-card"><img src="logomotor9.png" alt="MOTOR 9"></div>
-                    <div class="carousel-partner-card"><img src="logosanp.png" alt="SANP"></div>
-                    <div class="carousel-partner-card"><img src="logopromosalon.png" alt="Promo Salon"></div>
-                    <div class="carousel-partner-card"><img src="logoformulastudentuk.png" alt="Formula Student UK"></div>
-                    <div class="carousel-partner-card"><img src="logopac.png" alt="PAC"></div>
-                    <div class="carousel-partner-card"><img src="logoelmaerifa.png" alt="Association El Maerifa"></div>
-                    <div class="carousel-partner-card"><img src="logosimscale.png" alt="SimScale"></div>
-                    <div class="carousel-partner-card"><img src="logooxy.png" alt="Oxy"></div>
-                    <div class="carousel-partner-card"><img src="logomaghrebtruck.png" alt="Maghreb Truck Company"></div>
-                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
-                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technomotive"></div>
-                    <div class="carousel-partner-card"><img src="logoidenet.png" alt="Ide Net"></div>
-                    <div class="carousel-partner-card"><img src="logofluidex.png" alt="Fluidex"></div>
-                    <div class="carousel-partner-card"><img src="logotoyota.png" alt="Toyota"></div>
                     <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
-                    <div class="carousel-partner-card"><img src="logoabprecision.png" alt="AB Precision"></div>
-                    <div class="carousel-partner-card"><img src="logoeuroprotection.png" alt="Euro Protection Algérie"></div>
-                    <div class="carousel-partner-card"><img src="logoalmitech.png" alt="Almitech"></div>
-                    <!-- Série 2 — copie pour boucle infinie -->
+                    <div class="carousel-partner-card"><img src="logotoyota.png" alt="Toyota"></div>
+                    <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
+                    <div class="carousel-partner-card"><img src="logofluidex.png" alt="Fluidex"></div>
+                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
+                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technocast"></div>
+                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
                     <div class="carousel-partner-card"><img src="logobaouchi.png" alt="Trans Baouchi"></div>
-                    <div class="carousel-partner-card"><img src="logovms.jpeg" alt="VMS"></div>
-                    <div class="carousel-partner-card"><img src="logomondialindustries.png" alt="Mondial Industries"></div>
-                    <div class="carousel-partner-card"><img src="logocosider.png" alt="Cosider"></div>
-                    <div class="carousel-partner-card"><img src="logoipg.png" alt="JPG Car Maker"></div>
-                    <div class="carousel-partner-card"><img src="logodassault.png" alt="Dassault Systèmes"></div>
-                    <div class="carousel-partner-card"><img src="logoansys.png" alt="Ansys"></div>
-                    <div class="carousel-partner-card"><img src="logorapidharness.png" alt="Rapidharness"></div>
-                    <div class="carousel-partner-card"><img src="logomathworks.png" alt="MathWorks"></div>
-                    <div class="carousel-partner-card"><img src="logomerbahindustrie.png" alt="Merbah Industrie"></div>
-                    <div class="carousel-partner-card"><img src="logoslb.png" alt="SLB"></div>
-                    <div class="carousel-partner-card"><img src="logорhodius.png" alt="Rhodius"></div>
-                    <div class="carousel-partner-card"><img src="logopurepox.jpeg" alt="Purepox"></div>
-                    <div class="carousel-partner-card"><img src="logoenp.jpg" alt="ENP"></div>
-                    <div class="carousel-partner-card"><img src="logocrti.png" alt="CRTI"></div>
-                    <div class="carousel-partner-card"><img src="logomotor9.png" alt="MOTOR 9"></div>
-                    <div class="carousel-partner-card"><img src="logosanp.png" alt="SANP"></div>
-                    <div class="carousel-partner-card"><img src="logopromosalon.png" alt="Promo Salon"></div>
-                    <div class="carousel-partner-card"><img src="logoformulastudentuk.png" alt="Formula Student UK"></div>
-                    <div class="carousel-partner-card"><img src="logopac.png" alt="PAC"></div>
-                    <div class="carousel-partner-card"><img src="logoelmaerifa.png" alt="Association El Maerifa"></div>
-                    <div class="carousel-partner-card"><img src="logosimscale.png" alt="SimScale"></div>
-                    <div class="carousel-partner-card"><img src="logooxy.png" alt="Oxy"></div>
-                    <div class="carousel-partner-card"><img src="logomaghrebtruck.png" alt="Maghreb Truck Company"></div>
-                    <div class="carousel-partner-card"><img src="logoBkFire.png" alt="BK Fire"></div>
-                    <div class="carousel-partner-card"><img src="logotechnomotiv.jpeg" alt="Technomotive"></div>
-                    <div class="carousel-partner-card"><img src="logoidenet.png" alt="Ide Net"></div>
-                    <div class="carousel-partner-card"><img src="logofluidex.png" alt="Fluidex"></div>
-                    <div class="carousel-partner-card"><img src="logotoyota.png" alt="Toyota"></div>
-                    <div class="carousel-partner-card"><img src="logoHKINDUSTRIE.png" alt="HK Industrie"></div>
-                    <div class="carousel-partner-card"><img src="logoabprecision.png" alt="AB Precision"></div>
-                    <div class="carousel-partner-card"><img src="logoeuroprotection.png" alt="Euro Protection Algérie"></div>
-                    <div class="carousel-partner-card"><img src="logoalmitech.png" alt="Almitech"></div>
                 </div>
             </div>
 
@@ -579,77 +496,42 @@
                 See More Partners
             </button>
 
-            <!-- GRILLE COMPLÈTE -->
             <div class="all-partners-grid" id="allPartnersGrid">
-
-                <!-- PACK V3 -->
-                <div class="partners-category-title">Pack V3</div>
+                <div class="partners-category-title">Pack V2</div>
                 <div class="partners-category-grid">
-                    <div class="all-partner-card pack-v3">
-                        <div class="pack-badge">V3</div>
-                        <img src="logobaouchi.png" alt="Trans Baouchi">
-                        <span class="partner-name">Trans Baouchi</span>
-                    </div>
-                    <div class="all-partner-card pack-v3">
-                        <div class="pack-badge">V3</div>
+                    <div class="all-partner-card pack-v2">
+                        <div class="pack-badge">V2</div>
                         <img src="logovms.jpeg" alt="VMS">
                         <span class="partner-name">VMS</span>
                     </div>
-                    <div class="all-partner-card pack-v3">
-                        <div class="pack-badge">V3</div>
-                        <img src="logomondialindustries.png" alt="Mondial Industries">
-                        <span class="partner-name">Mondial Industries</span>
-                    </div>
-                    <div class="all-partner-card pack-v3">
-                        <div class="pack-badge">V3</div>
-                        <img src="logocosider.png" alt="Cosider">
-                        <span class="partner-name">Cosider</span>
+                    <div class="all-partner-card pack-v2">
+                        <div class="pack-badge">V2</div>
+                        <img src="logopurepox.jpeg" alt="Purepox">
+                        <span class="partner-name">Purepox</span>
                     </div>
                 </div>
 
-                <!-- PACK V2 -->
-                <div class="partners-category-title">Pack V2</div>
-                <div class="partners-category-grid">
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoipg.png" alt="JPG Car Maker"><span class="partner-name">JPG Car Maker</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logodassault.png" alt="Dassault Systèmes"><span class="partner-name">Dassault Systèmes</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoansys.png" alt="Ansys"><span class="partner-name">Ansys</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logorapidharness.png" alt="Rapidharness"><span class="partner-name">Rapidharness</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logomathworks.png" alt="MathWorks"><span class="partner-name">MathWorks</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logomerbahindustrie.png" alt="Merbah Industrie"><span class="partner-name">Merbah Industrie</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoslb.png" alt="SLB"><span class="partner-name">SLB</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logорhodius.png" alt="Rhodius"><span class="partner-name">Rhodius</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logopurepox.jpeg" alt="Purepox"><span class="partner-name">Purepox</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><span>Fab Lab</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoenp.jpg" alt="ENP"><span class="partner-name">ENP</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logocrti.png" alt="CRTI"><span class="partner-name">CRTI</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logomotor9.png" alt="MOTOR 9"><span class="partner-name">MOTOR 9</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logosanp.png" alt="SANP"><span class="partner-name">SANP</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logopromosalon.png" alt="Promo Salon"><span class="partner-name">Promo Salon</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoformulastudentuk.png" alt="Formula Student UK"><span class="partner-name">Formula Student UK</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logopac.png" alt="PAC"><span class="partner-name">PAC</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logoelmaerifa.png" alt="Association El Maerifa"><span class="partner-name">Association El Maerifa</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><span>Bittam / SARL Qannaq</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logosimscale.png" alt="SimScale"><span class="partner-name">SimScale</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logooxy.png" alt="Oxy"><span class="partner-name">Oxy</span></div>
-                    <div class="all-partner-card pack-v2"><div class="pack-badge">V2</div><img src="logomaghrebtruck.png" alt="Maghreb Truck Company"><span class="partner-name">Maghreb Truck Company</span></div>
-                </div>
-
-                <!-- PACK V1 -->
                 <div class="partners-category-title">Pack V1</div>
                 <div class="partners-category-grid">
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoBkFire.png" alt="BK Fire"><span class="partner-name">BK Fire</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotechnomotiv.jpeg" alt="Technomotive"><span class="partner-name">Technomotive</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoidenet.png" alt="Ide Net"><span class="partner-name">Ide Net</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logofluidex.png" alt="Fluidex"><span class="partner-name">Fluidex</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotoyota.png" alt="Toyota"><span class="partner-name">Toyota</span></div>
                     <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoHKINDUSTRIE.png" alt="HK Industrie"><span class="partner-name">HK Industrie</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoabprecision.png" alt="AB Precision"><span class="partner-name">AB Precision</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><span>Pima</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoeuroprotection.png" alt="Euro Protection Algérie"><span class="partner-name">Euro Protection Algérie</span></div>
-                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoalmitech.png" alt="Almitech"><span class="partner-name">Almitech</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotoyota.png" alt="Toyota"><span class="partner-name">Toyota</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoslb.png" alt="SLB"><span class="partner-name">SLB</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logofluidex.png" alt="Fluidex"><span class="partner-name">Fluidex</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logomerbahindustrie.png" alt="Merbah Industrie"><span class="partner-name">Merbah Industrie</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logotechnomotiv.jpeg" alt="Technocast"><span class="partner-name">Technocast</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logoBkFire.png" alt="BK Fire"><span class="partner-name">BK Fire</span></div>
+                    <div class="all-partner-card pack-v1"><div class="pack-badge">V1</div><img src="logobaouchi.png" alt="Trans Baouchi"><span class="partner-name">Trans Baouchi</span></div>
                 </div>
 
-            </div><!-- fin all-partners-grid -->
+                <div class="partners-category-title">Other Sponsors</div>
+                <div class="partners-category-grid">
+                    <div class="all-partner-card pack-other"><img src="logoipg.png" alt="IPG Car Maker"><span class="partner-name">IPG Car Maker</span></div>
+                    <div class="all-partner-card pack-other"><img src="logodassault.png" alt="Dassault Systèmes"><span class="partner-name">Dassault Systèmes</span></div>
+                    <div class="all-partner-card pack-other"><img src="logoansys.png" alt="Ansys"><span class="partner-name">Ansys</span></div>
+                    <div class="all-partner-card pack-other"><img src="logorapidharness.png" alt="Rapidharness"><span class="partner-name">Rapidharness</span></div>
+                    <div class="all-partner-card pack-other"><img src="logomathworks.png" alt="Mathworks"><span class="partner-name">Mathworks</span></div>
+                </div>
+            </div>
 
             <div class="partner-cta">
                 <h3 data-translate="partners_cta_title">Become a Partner</h3>
@@ -658,7 +540,6 @@
                     Contact Us
                 </button>
             </div>
-
         </div>
     </section>
 
@@ -668,15 +549,19 @@
             <h2 data-translate="media_title">Media</h2>
             <div class="media-filters">
                 <button class="filter-btn active" data-filter="all" data-translate="filter_all">All</button>
+                <button class="filter-btn" data-filter="workshop" data-translate="filter_workshop">Workshop</button>
                 <button class="filter-btn" data-filter="manufacturing" data-translate="filter_manufacturing">Manufacturing</button>
                 <button class="filter-btn" data-filter="events" data-translate="filter_events">Events</button>
             </div>
             <div class="media-gallery" id="mediaGallery">
-                <img src="manufacturing1.jpg" class="media-item" data-category="manufacturing" alt="Manufacturing 1" onclick="openLightbox(0)">
-                <img src="manufacturing2.png" class="media-item" data-category="manufacturing" alt="Manufacturing 2" onclick="openLightbox(1)">
-                <img src="manufacturing3.png" class="media-item" data-category="manufacturing" alt="Manufacturing 3" onclick="openLightbox(2)">
-                <img src="event1.png" class="media-item" data-category="events" alt="Event 1" onclick="openLightbox(3)">
-                <img src="event2.png" class="media-item" data-category="events" alt="Event 2" onclick="openLightbox(4)">
+                <img src="placeholder.jpg" data-src="real-image-1.jpg" class="media-item lazy" data-category="workshop" alt="Workshop" onclick="openLightbox(0)">
+                <img src="placeholder.jpg" data-src="real-image-2.jpg" class="media-item lazy" data-category="manufacturing" alt="Manufacturing" onclick="openLightbox(1)">
+                <img src="placeholder.jpg" data-src="real-image-3.jpg" class="media-item lazy" data-category="events" alt="Event" onclick="openLightbox(2)">
+                <img src="placeholder.jpg" data-src="real-image-4.jpg" class="media-item lazy" data-category="workshop" alt="Workshop" onclick="openLightbox(3)">
+                <img src="placeholder.jpg" data-src="real-image-5.jpg" class="media-item lazy" data-category="manufacturing" alt="Manufacturing" onclick="openLightbox(4)">
+                <img src="placeholder.jpg" data-src="real-image-6.jpg" class="media-item lazy" data-category="events" alt="Event" onclick="openLightbox(5)">
+                <img src="event1.png" class="media-item" data-category="events" alt="Minister Visit Event 1" onclick="openLightbox(6)">
+                <img src="event2.png" class="media-item" data-category="events" alt="Minister Visit Event 2" onclick="openLightbox(7)">
             </div>
             <div class="press-kit-section">
                 <h3 data-translate="presskit_title">Press Kit</h3>
